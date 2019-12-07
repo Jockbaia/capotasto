@@ -120,9 +120,9 @@
 	
 <div class="resizer2">
 
-<div class="nick_userbox"><a href="<?php echo get_site_url(); ?>/author/<?php echo get_the_author_meta('nickname'); ?>"><i class="fas fa-user"></i> <?php the_author(); ?></a></div> 
+<div class="nickUserbox"><a href="<?php echo get_site_url(); ?>/author/<?php echo get_the_author_meta('nickname'); ?>"><i class="fas fa-user"></i> <?php the_author(); ?></a></div> 
 
-<div class="exp_userbox"><i class="fas fa-print"></i> <a href="#" onclick="ga('send', {hitType: 'event',  eventCategory: 'Interaction', eventAction: 'print', eventLabel: '<?php the_ID(); ?>'});window.print();return false;">Stampa</a></div>
+<div class="printUserbox"><i class="fas fa-print"></i> <a href="#" onclick="ga('send', {hitType: 'event',  eventCategory: 'Interaction', eventAction: 'print', eventLabel: '<?php the_ID(); ?>'});window.print();return false;">Stampa</a></div>
 	
 
 </div>
