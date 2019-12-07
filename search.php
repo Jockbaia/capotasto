@@ -1,0 +1,61 @@
+<?php
+/**
+ * The template for displaying archive pages.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package revenue
+ */
+
+get_header(); ?>
+
+	<div id="primary" class="content-area clear">
+
+		<main id="main" class="site-main clear">
+		
+			<div id="recent-content" class="content-search">
+				
+			<div class="searchResults">
+					<?php printf( esc_html__( 'Risultati di ricerca per %s', 'revenue' ), '"' . get_search_query() . '"' ); ?>				
+			</div>
+				<div class="searchHelper" href="https://www.picopod.it/richieste" onclick="javascript:location.href='https://www.picopod.it/richieste'"">Non hai trovato il brano che stai cercando? Clicca questo bottone!</div>
+
+			<!-- .breadcrumbs -->
+				
+			<?php
+
+			if ( have_posts() ) :	
+										
+			/* Start the Loop */
+			while ( have_posts() ) : the_post();
+
+				/*
+				 * Include the Post-Format-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+				 */
+				
+
+				get_template_part( 'template-parts/content', 'search' );
+
+				endwhile;
+
+				else :
+
+					get_template_part( 'template-parts/content', 'none' );
+
+				?>
+
+			<?php endif; ?>
+
+		</div>
+
+		</main><!-- .site-main -->
+
+		<?php get_template_part( 'template-parts/pagination', '' ); ?>
+
+	</div><!-- #primary -->
+
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>
+
