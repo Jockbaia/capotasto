@@ -398,16 +398,16 @@ padding:10px;
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 767px) {
-.yarpp_related_posts {
+  .yarpp_related_posts {
+    background-image: url(https://i.imgur.com/4uwwv7T.jpg);
+    width: 100%;
     text-align: center;
-    background-color: #e9e9e9;
     white-space: nowrap;
     position: sticky;
     padding-left: 10px;
     overflow-x: scroll;
     overflow-y: hidden;
-    margin-top: -6px;
-	padding-right: 10px;
+    padding-right: 10px;
 }
 	button#backToTop {
     font-size: 10px;
@@ -552,10 +552,9 @@ img {
 }
 	
 	.entry-content {
-  	      padding-left: 10px;
+  	padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
-    padding-bottom: 20px;
   }
 	
 .site-content {
@@ -676,8 +675,7 @@ margin-bottom: 0px;
 	
 	.single h1.entry-title {
 		text-align: -webkit-center;
-    font-size: 20px;
-    border-bottom: 1px dashed #c4c4c4;
+    font-size: 18px;
     padding-top: 10px;
     padding-bottom: 2px;
 	}
