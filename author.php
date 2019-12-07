@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package revenue
+ * @package capotasto
  */
 get_header(); ?>
 
@@ -15,7 +15,7 @@ get_header(); ?>
 
     <div class="author_header">
 
-      <div class="nick_userbox"><i class="fas fa-music"></i><?php
+      <div class="nickUserbox"><i class="fas fa-music"></i><?php
 		  global $current_user;
 global $wp_query;
 $author =  $wp_query->get_queried_object();
@@ -25,11 +25,7 @@ echo ' ';
 echo $user_post_count;
 ?> brani inseriti</div>
 
-      <div class="exp_userbox"><i class="fas fa-star"></i> <?php
-$str = get_the_author_meta( '_gamipress_exp_points' ); 
-echo $str;
-?> EXP</div>
-
+      <div class="printUserbox"><i class="fas fa-star"></i> WIP</div>
 
     </div>
     <div class="author_info">
@@ -51,22 +47,26 @@ echo $str;
       <!--<div class="category-description">
 				<?php if (is_tag()) { ?><?php echo tag_description(); ?><?php } ?>
 			</div>-->
-		<div class="author-data">
-      <div id="avatar" style="text-align:center;">
-        <?php global $wp_query;
+      <div class="author-data">
+        <div id="avatar" style="text-align:center;">
+          <?php global $wp_query;
 $curauth = $author;
 		  if ($cur)?>
-        <img src="<?php echo get_avatar_url($curauth); ?>" class="attachment-full size-full" alt="" srcset="<?php echo get_avatar_url($curauth); ?> 1000w, <?php echo get_avatar_url($curauth); ?> 300w, <?php echo get_avatar_url($curauth); ?> 768w" sizes="(max-width: 100px) 100vw, 100px" width="100" height="100">
+          <img src="<?php echo get_avatar_url($curauth); ?>" class="attachment-full size-full" alt=""
+            srcset="<?php echo get_avatar_url($curauth); ?> 1000w, <?php echo get_avatar_url($curauth); ?> 300w, <?php echo get_avatar_url($curauth); ?> 768w"
+            sizes="(max-width: 100px) 100vw, 100px" width="100" height="100">
+        </div>
+        <div id="data">
+          <div class="author_nickname"><?php echo $curauth->display_name;?></div>
+          <div class="author_bio"><?php $str = get_the_author_meta( 'userbio' ); echo $str?></div>
+        </div>
       </div>
-			<div id="data">
-      			<div class="author_nickname"><?php echo $curauth->display_name;?></div>
-	  			<div class="author_bio"><?php $str = get_the_author_meta( 'userbio' ); echo $str?></div>
-			</div>
-	</div>
 
       <div class="tab">
-        <button id="chordButton" class="tablinks author_chords" onclick="openTab(event, 'chords')"> <i class="fas fa-book"></i> Ultimi accordi inseriti</button>
-        <button id="rewardButton" class="tablinks author_chords" onclick="openTab(event, 'rewards')"><i class="fas fa-guitar"></i> Sull'autore</button>
+        <button id="chordButton" class="tablinks author_chords" onclick="openTab(event, 'chords')"> <i
+            class="fas fa-book"></i> Ultimi accordi inseriti</button>
+        <button id="rewardButton" class="tablinks author_chords" onclick="openTab(event, 'rewards')"><i
+            class="fas fa-guitar"></i> Sull'autore</button>
       </div>
       <div id="chords" class="tabcontent">
         <div id="recent-content" class="content-search">
@@ -95,9 +95,9 @@ $curauth = $author;
       </div>
 
       <div id="rewards" class="tabcontent">
-		  <div class="trofei_banner">
-			  Lavori in corso. Torna tra qualche giorno!
-		  </div>
+        <div class="trofei_banner">
+          Lavori in corso. Torna tra qualche giorno!
+        </div>
       </div>
     </div>
   </main><!-- .site-main -->
@@ -128,42 +128,39 @@ $curauth = $author;
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
   }
-
 </script>
 
 <script>
-	function hexToLuma(colour){
-    const hex   = colour.replace(/#/, '');
-    const r     = parseInt(hex.substr(0, 2), 16);
-    const g     = parseInt(hex.substr(2, 2), 16);
-    const b     = parseInt(hex.substr(4, 2), 16);
+  function hexToLuma(colour) {
+    const hex = colour.replace(/#/, '');
+    const r = parseInt(hex.substr(0, 2), 16);
+    const g = parseInt(hex.substr(2, 2), 16);
+    const b = parseInt(hex.substr(4, 2), 16);
 
     return [
-        0.299 * r,
-        0.587 * g,
-        0.114 * b
+      0.299 * r,
+      0.587 * g,
+      0.114 * b
     ].reduce((a, b) => a + b) / 255;
-};
-var author = document.querySelectorAll("div.author-data")[0];
-var nick = document.querySelectorAll("div.author_nickname")[0];
-var bio = document.querySelectorAll("div.author_bio")[0];
-var img = author.children[0].children[0];
-img.crossOrigin = "anonymous"; // This enables CORS
-	img.addEventListener('load', function() {
-    	var vibrant = new Vibrant(img);
-    	var swatches = vibrant.swatches()
-		var color = swatches["Vibrant"].getHex()
-    	author.style.backgroundColor = color
-		if (hexToLuma(color) > 0.7){
-			nick.style.color = "#000000";
-			bio.style.color = "#000000";
-		} else {
-			nick.style.color = "#ffffff";
-			bio.style.color = "#ffffff";
-		}
-	});
-
-
+  };
+  var author = document.querySelectorAll("div.author-data")[0];
+  var nick = document.querySelectorAll("div.author_nickname")[0];
+  var bio = document.querySelectorAll("div.author_bio")[0];
+  var img = author.children[0].children[0];
+  img.crossOrigin = "anonymous"; // This enables CORS
+  img.addEventListener('load', function () {
+    var vibrant = new Vibrant(img);
+    var swatches = vibrant.swatches()
+    var color = swatches["Vibrant"].getHex()
+    author.style.backgroundColor = color
+    if (hexToLuma(color) > 0.7) {
+      nick.style.color = "#000000";
+      bio.style.color = "#000000";
+    } else {
+      nick.style.color = "#ffffff";
+      bio.style.color = "#ffffff";
+    }
+  });
 </script>
 
 
