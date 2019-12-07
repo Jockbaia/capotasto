@@ -27,6 +27,13 @@ Tags: two-columns, right-sidebar
     border-radius: 20px;
 }
 
+.nickUserbox a  {
+  color:white !important;
+}
+.nickUserbox a:hover  {
+  text-decoration: underline;
+}
+
 .printUserbox {
 	color: white;
     float: right;
@@ -34,6 +41,13 @@ Tags: two-columns, right-sidebar
     padding: 2px 10px 2px 10px;
     font-size: 14px;
     border-radius: 20px;
+}
+
+.printUserbox a  {
+  color:white !important;
+}
+.printUserbox a:hover  {
+  text-decoration: underline;
 }
 
 /* NOTE OLD SECTION WITH UNOPTIMIZED CSS */
@@ -49,12 +63,7 @@ border-width: 0 !important;
 	text-shadow: none;
 }
 
-.nick_userbox a  {
-    color:white !important;
-}
-.nick_userbox a:hover  {
-    text-decoration: underline;
-}
+
 /* TAB AUTHOR */
 .author-data #avatar{
 	flex: 1;
