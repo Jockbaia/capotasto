@@ -66,9 +66,15 @@
 			</p>
 		</div>
 		<div id="swapper-other" style="display:none; border:2px dotted blue; padding:25px;">
-			<p style="margin:0; color:blue;">
-				This div displayed when the link was clicked.
-			</p>
+		<?php
+			$str = get_field(video_youtube);
+			$videoid = substr($str, strrpos($str, '=') + 1);
+	
+		if (!empty($str)) {
+		?>
+
+	<!-- <iframe id="youtube-player" width="560" height="300" src="https://www.youtube-nocookie.com/embed/<?php echo $videoid ?>?rel=0&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+	<div id="player"></div>
 		</div>
 
 		<p style="text-align:center; font-weight:bold; font-style:italic;">
@@ -79,15 +85,7 @@
 
 	</div><!-- .entry-content -->
 
-	<?php
-			$str = get_field(video_youtube);
-			$videoid = substr($str, strrpos($str, '=') + 1);
 	
-		if (!empty($str)) {
-		?>
-
-	<!-- <iframe id="youtube-player" width="560" height="300" src="https://www.youtube-nocookie.com/embed/<?php echo $videoid ?>?rel=0&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
-	<div id="player"></div>
 	<script>
 		// 3. This function creates an <iframe> (and YouTube player)
 		//    after the API code downloads.
