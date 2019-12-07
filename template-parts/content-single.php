@@ -44,29 +44,9 @@
 			<?php the_excerpt(); ?>
 		</div>
 
-		<!-- SWAPPER VIDEO / AD -->
+	</div><!-- .entry-content -->
 
-		<script type="text/javascript">
-			function SwapDivsWithClick(div1, div2) {
-				d1 = document.getElementById(div1);
-				d2 = document.getElementById(div2);
-				if (d2.style.display == "none") {
-					d1.style.display = "none";
-					d2.style.display = "block";
-				} else {
-					d1.style.display = "block";
-					d2.style.display = "none";
-				}
-			}
-		</script>
-
-		<div id="swapper-first" style="display:block; border:2px dashed red; padding:25px;">
-			<p style="margin:0; color:red;">
-				This div displayed when the web page first loaded.
-			</p>
-		</div>
-		<div id="swapper-other" style="display:none; border:2px dotted blue; padding:25px;">
-		<?php
+	<?php
 			$str = get_field(video_youtube);
 			$videoid = substr($str, strrpos($str, '=') + 1);
 	
@@ -75,17 +55,6 @@
 
 	<!-- <iframe id="youtube-player" width="560" height="300" src="https://www.youtube-nocookie.com/embed/<?php echo $videoid ?>?rel=0&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
 	<div id="player"></div>
-		</div>
-
-		<p style="text-align:center; font-weight:bold; font-style:italic;">
-			<a href="javascript:SwapDivsWithClick('swapper-first','swapper-other')">(Swap Divs)</a>
-		</p>
-
-
-
-	</div><!-- .entry-content -->
-
-	
 	<script>
 		// 3. This function creates an <iframe> (and YouTube player)
 		//    after the API code downloads.
