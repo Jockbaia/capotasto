@@ -72,7 +72,7 @@ Tags: two-columns, right-sidebar
   /*! display: table-cell; */
   /*! vertical-align: middle; */
   padding-bottom: 10px;
-  line-height: 18px;
+  line-height: 17px;
 }
 
 input:checked+.slider {
