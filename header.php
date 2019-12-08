@@ -17,6 +17,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable='no'">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="true">
+<meta name="theme-color" content="#b33b3b">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <?php if (get_theme_mod('favicon', '') != null) { ?>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
