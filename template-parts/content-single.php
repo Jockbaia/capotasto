@@ -201,13 +201,15 @@
 				function handleClick(cb) {
 					var pl = document.querySelector("iframe[id=player]");
 					if (cb.checked) {
-						pl.style.visibility = 'visible';
+						pl.style.maxWidth = "100%"
+						//pl.style.visibility = 'visible';
 					} else {
-						pl.style.visibility = 'hidden';
+						pl.style.maxWidth = "0%"
+						//pl.style.visibility = 'hidden';
 					}
 				}
 			</script>
-			<input type="checkbox" name="slider" checked onclick='handleClick(this);'>
+			<input type="checkbox" name="slider" onclick='handleClick(this);'>
 			<span class="slider round"></span>
 		</label>
 
