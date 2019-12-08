@@ -134,6 +134,22 @@
 	</div>
 
 	<div class="resizer">
+		<label class="switch">
+			<script>
+				function handleClick(cb) {
+					var pl = document.querySelector("iframe[id=player]");
+					if (cb.checked) {
+						pl.style.maxWidth = "100%"
+						//pl.style.visibility = 'visible';
+					} else {
+						pl.style.maxWidth = "0%"
+						//pl.style.visibility = 'hidden';
+					}
+				}
+			</script>
+			<input type="checkbox" name="slider" onclick='handleClick(this);'>
+			<span class="slider round"></span>
+		</label>
 		<?php if(function_exists('fontResizer_place')) { fontResizer_place(); } ?>
 
 		<div id="autoscrollMack" class="autoscrollMack">
@@ -196,25 +212,6 @@
 
 		<div class="watermark"><i style="color:#ffffff" class="fas fa-user"></i> Scritti da <?php the_author(); ?></div>
 		<div class="watermark"><i style="color:#ffffff" class="fas fa-heart"></i> Altri accordi su Picopod.it</div>
-		<label class="switch">
-			<script>
-				function handleClick(cb) {
-					var pl = document.querySelector("iframe[id=player]");
-					if (cb.checked) {
-						pl.style.maxWidth = "100%"
-						//pl.style.visibility = 'visible';
-					} else {
-						pl.style.maxWidth = "0%"
-						//pl.style.visibility = 'hidden';
-					}
-				}
-			</script>
-			<input type="checkbox" name="slider" onclick='handleClick(this);'>
-			<span class="slider round"></span>
-		</label>
-
-
-
 	</div>
 
 
