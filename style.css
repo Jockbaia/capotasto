@@ -55,23 +55,20 @@ Tags: two-columns, right-sidebar
 .slider:before {
   position: absolute;
   content: "\f04b";
-  height: 18px;
+  height: 23px;
   width: 18px;
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
   transition: .4s;
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
+  padding-top: 2px;
   text-decoration: inherit;
   font-size: 11px;
   text-align: center;
   vertical-align: text-top;
-  /*! display: table-cell; */
-  /*! vertical-align: middle; */
-  padding-bottom: 10px;
   line-height: 17px;
 }
 
