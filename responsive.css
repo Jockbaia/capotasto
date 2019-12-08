@@ -269,12 +269,12 @@
 }
 	
 .resizer2 {
-    background-color: #eaeaea;
-    padding: 9px;
-    border-radius: 0px;
-    border-top: 2px solid #c3c3c3;
-    border-left: 0px;
-    border-right: 0px;
+  background-color: #eaeaea;
+  padding: 9px;
+  border-radius: 0px;
+  border-top: 1px solid #c3c3c3;
+  border-left: 0px;
+  border-right: 0px;
 }
 
 	
@@ -399,7 +399,8 @@ padding:10px;
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 767px) {
   .yarpp_related_posts {
-    background-image: url(https://i.imgur.com/4uwwv7T.jpg);
+    background-color: #f7f7f7;
+    border-top: 1px solid #efefef;
     width: 100%;
     text-align: center;
     white-space: nowrap;
@@ -408,6 +409,7 @@ padding:10px;
     overflow-x: scroll;
     overflow-y: hidden;
     padding-right: 10px;
+    border-bottom: 1px solid #efefef;
 }
 	button#backToTop {
     font-size: 10px;
@@ -525,7 +527,7 @@ img {
 	
 .resizer {
     background-color: #f5f5f5;
-    border-bottom: 2px solid #c3c3c3;
+    border-bottom: 1px solid #c3c3c3;
     padding: 10px;
     border-radius: 0px;
     margin-bottom: 0px;
