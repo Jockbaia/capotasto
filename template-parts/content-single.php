@@ -196,6 +196,20 @@
 
 		<div class="watermark"><i style="color:#ffffff" class="fas fa-user"></i> Scritti da <?php the_author(); ?></div>
 		<div class="watermark"><i style="color:#ffffff" class="fas fa-heart"></i> Altri accordi su Picopod.it</div>
+		<label class="switch">
+			<script>
+				function handleClick(cb) {
+					var pl = document.querySelector("iframe[id=player]");
+					if (cb.checked) {
+						pl.style.visibility = 'visible';
+					} else {
+						pl.style.visibility = 'hidden';
+					}
+				}
+			</script>
+			<input type="checkbox" name="slider" checked onclick='handleClick(this);'>
+			<span class="slider round"></span>
+		</label>
 
 
 
