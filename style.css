@@ -21,6 +21,7 @@ Tags: two-columns, right-sidebar
   width: 300px !important;
   height: 200px !important;
   z-index: 999 !important;
+  -webkit-transition: 1s;
 }
 /** TOGGLE VIDEO **/
 .switch {
