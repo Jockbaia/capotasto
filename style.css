@@ -14,15 +14,16 @@ Tags: two-columns, right-sidebar
 
 /** YT PLAYER **/
 .modal-player {
-	max-width:0%;
+  max-width: 0%;
   position: fixed !important;
   bottom: 10px !important;
   right: 10px !important;
-  width: 300px !important;
-  height: 200px !important;
+  width: 150px !important;
+  height: 100px !important;
   z-index: 999 !important;
   -webkit-transition: 1s;
 }
+
 /** TOGGLE VIDEO **/
 .switch {
   position: relative;
@@ -33,7 +34,7 @@ Tags: two-columns, right-sidebar
   margin-right: 5px;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -74,15 +75,15 @@ Tags: two-columns, right-sidebar
   line-height: 18px;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #2196F3;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(24px);
   -ms-transform: translateX(24px);
   transform: translateX(24px);
@@ -4072,6 +4073,18 @@ modmenu a:visited {
 }
 
 @media print {
+
+  /** YT PLAYER **/
+  .modal-player {
+    max-width: 0%;
+    position: fixed !important;
+    bottom: 10px !important;
+    right: 10px !important;
+    width: 300px !important;
+    height: 200px !important;
+    z-index: 999 !important;
+    -webkit-transition: 1s;
+  }
 
   .topBanner {
     display: none;
