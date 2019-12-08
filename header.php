@@ -14,7 +14,7 @@
 <head>
 <meta name="google-site-verification" content="XNTymqUF-oKifqX7hPf9Nu76OExy2Iazv5S_Wd5Cp54" />
 <meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable='no'">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="true">
 <link rel="profile" href="http://gmpg.org/xfn/11">
