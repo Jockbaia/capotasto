@@ -65,6 +65,7 @@
 			player = new YT.Player('player', {
 				height: '200',
 				width: '300',
+				playerVars: {'showinfo': 0 }
 				videoId: '<?php echo $videoid ?>',
 				events: {
 					'onReady': onPlayerReady,
