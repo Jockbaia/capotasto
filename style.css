@@ -76,11 +76,11 @@ Tags: two-columns, right-sidebar
 }
 
 input:checked+.slider {
-  background-color: #2196F3;
+  background-color: #B33B3B;
 }
 
 input:focus+.slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #B33B3B;
 }
 
 input:checked+.slider:before {
