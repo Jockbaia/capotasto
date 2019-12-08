@@ -54,7 +54,7 @@
 		?>
 
 	<!-- <iframe id="youtube-player" width="560" height="300" src="https://www.youtube-nocookie.com/embed/<?php echo $videoid ?>?rel=0&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
-	<div id="player"></div>
+	<div id="player" class="modal-player"></div>
 	<script>
 		// 3. This function creates an <iframe> (and YouTube player)
 		//    after the API code downloads.
@@ -62,8 +62,8 @@
 
 		function onYouTubeIframeAPIReady() {
 			player = new YT.Player('player', {
-				height: '300',
-				width: '560',
+				height: '200',
+				width: '300',
 				videoId: '<?php echo $videoid ?>',
 				events: {
 					'onReady': onPlayerReady,

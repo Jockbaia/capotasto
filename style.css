@@ -11,6 +11,15 @@ Text Domain: capotasto
 Tags: two-columns, right-sidebar
 */
 
+/** YT PLAYER **/
+.modal-player {
+  position: fixed !important;
+  bottom: 10px !important;
+  right: 10px !important;
+  width: 300px !important;
+  height: 200px !important;
+  z-index: 999 !important;
+}
 
 /* NOTE NEW SECTION WITH CLEAN CSS */
 
