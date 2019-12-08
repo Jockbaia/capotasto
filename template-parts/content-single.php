@@ -61,17 +61,7 @@
 		var player;
 
 		function onYouTubeIframeAPIReady() {
-			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-				player = new YT.Player('player', {
-				height: '100',
-				width: '150',
-				videoId: '<?php echo $videoid ?>',
-				events: {
-					'onReady': onPlayerReady,
-					'onStateChange': onPlayerStateChange
-				}
-			});
-		} else {
+			
 			player = new YT.Player('player', {
 				height: '200',
 				width: '300',
@@ -81,7 +71,6 @@
 					'onStateChange': onPlayerStateChange
 				}
 			});
-		}
 		}
 
 		// 4. The API will call this function when the video player is ready.
