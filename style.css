@@ -4074,17 +4074,7 @@ modmenu a:visited {
 
 @media print {
 
-  /** YT PLAYER **/
-  .modal-player {
-    max-width: 0%;
-    position: fixed !important;
-    bottom: 10px !important;
-    right: 10px !important;
-    width: 300px !important;
-    height: 200px !important;
-    z-index: 999 !important;
-    -webkit-transition: 1s;
-  }
+
 
   .topBanner {
     display: none;
@@ -4214,6 +4204,22 @@ modmenu a:visited {
 
 .nick_userbox a:hover {
   text-decoration: underline;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+  /** YT PLAYER **/
+  .modal-player {
+    max-width: 0%;
+    position: fixed !important;
+    bottom: 10px !important;
+    right: 10px !important;
+    width: 300px !important;
+    height: 200px !important;
+    z-index: 999 !important;
+    -webkit-transition: 1s;
+  }
 }
 
 @media only screen and (min-width: 768px) {
