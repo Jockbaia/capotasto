@@ -232,14 +232,14 @@
 					var controls = document.querySelector("div[id=cmd]");
 					var controlsMobile = document.querySelector("div[id=cmd-mobile]");
 					if (cb.checked) {
-						controls.style.visibility = 'visible';
-						controlsMobile.style.visibility = 'visible';
-						pl.style.maxWidth = "100%"
+						controlsMobile.style.bottom = '0px';
+						pl.style.right = "10px";
+						//pl.style.maxWidth = "100%"
 						//pl.style.visibility = 'visible';
 					} else {
-						controls.style.visibility = 'hidden';
-						controlsMobile.style.visibility = 'hidden';
-						pl.style.maxWidth = "0%"
+						controlsMobile.style.bottom = '-50px';
+						pl.style.right = "-300px";
+						//pl.style.maxWidth = "0%"
 						//pl.style.visibility = 'hidden';
 					}
 				}

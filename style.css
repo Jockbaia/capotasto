@@ -14,20 +14,24 @@ Tags: two-columns, right-sidebar
 
 /** YT PLAYER **/
 .modal-player {
-  max-width: 0%;
+  /*max-width: 0%;*/
   position: fixed !important;
   bottom: 30px !important;
-right: 0px !important;
+right: -300px ;
 width: 150px !important;
   z-index: 999 !important;
   -webkit-transition: 1s;
 }
+iframe#player {
+  height: 100px;
+}
 #cmd-mobile{
 	display: flex  !important;
 	position:fixed  !important;
-    bottom: 0px  !important;
+    bottom: -50px  ;
     width:100%  !important;
 	z-index: 999  !important;
+	-webkit-transition: 1s;
 }
 #cmd{
 	display:none !important;
@@ -41,9 +45,7 @@ width: 150px !important;
 }
 
 .controls{
-    border-radius: 5px 5px 0 0;
     background-color: #b33b3b;
-	visibility: hidden;
     color:white;
     padding: 5px;
     display: flex;
@@ -4278,15 +4280,17 @@ modmenu a:visited {
 
   /** YT PLAYER **/
   .modal-player {
-    max-width: 0%;
     position: fixed !important;
     bottom: 50px !important;
-    right: 10px !important;
+    right: -300px;
     width: 300px !important;
     height: 200px !important;
     z-index: 999 !important;
     -webkit-transition: 1s;
   }
+	iframe#player {
+  height: 200px;
+}
 #cmd-mobile{
 	display: none !important;
 }
