@@ -16,12 +16,72 @@ Tags: two-columns, right-sidebar
 .modal-player {
   max-width: 0%;
   position: fixed !important;
-  bottom: 10px !important;
+  bottom: 150px !important;
   right: 10px !important;
   width: 150px !important;
   height: 100px !important;
   z-index: 999 !important;
   -webkit-transition: 1s;
+}
+
+.slidercontainer {
+	padding: 0 10px;
+}
+
+	#pause-button{
+    display: none;
+}
+
+.controls{
+    border-radius: 5px 5px 0 0;
+    background-color: #b33b3b;
+	visibility: hidden;
+    color:white;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+	-webkit-transition: .5s;
+    transition: visibility .5s;
+	transition-delay: .2s;
+}
+
+.slidercontainer {
+	padding: 0 10px;
+}
+#player {
+    pointer-events: none;
+}
+.player-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.player-slider:hover {
+    opacity: 1;
+}
+
+.player-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 5px;
+    height: 10px;
+    background: #672d2d;
+    cursor: pointer;
+}
+
+.player-slider::-moz-range-thumb {
+    width: 5px;
+    height: 10px;
+    background: #672d2d;
+    cursor: pointer;
 }
 
 /** TOGGLE VIDEO **/
@@ -4212,13 +4272,14 @@ modmenu a:visited {
   .modal-player {
     max-width: 0%;
     position: fixed !important;
-    bottom: 10px !important;
+    bottom: 50px !important;
     right: 10px !important;
     width: 300px !important;
     height: 200px !important;
     z-index: 999 !important;
     -webkit-transition: 1s;
   }
+
 }
 
 @media only screen and (min-width: 768px) {

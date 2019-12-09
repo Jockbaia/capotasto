@@ -56,63 +56,119 @@
 		?>
 
 	<!-- <iframe id="youtube-player" width="560" height="300" src="https://www.youtube-nocookie.com/embed/<?php echo $videoid ?>?rel=0&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
-	<div id="player" class="modal-player"></div>
+	<div class="modal-player">
+		<div id="cmd" class="controls"><i id="play-button" onclick="play()" class="fa fa-play"></i><i id="pause-button"
+                                                                                                  onclick="pause()"
+                                                                                                  class="fa fa-pause"></i>
+        <div class="slidercontainer">
+            <input type="range" value="0" class="player-slider" id="myRange" oninput="seek(this.value)">
+        </div>
+        <div class="timing">
+            <span id="min">00</span>:<span id="sec">00</span>
+        </div>
+    </div>
+		<div id="player"></div>
+	</div>
 	<script>
-		// 3. This function creates an <iframe> (and YouTube player)
-		//    after the API code downloads.
-		var player;
+            // 3. This function creates an <iframe> (and YouTube player)
+            //    after the API code downloads.
+            var player;
 
-		function onYouTubeIframeAPIReady() {
-			
-			player = new YT.Player('player', {
-				height: '200',
-				width: '300',
-				playerVars: {'showinfo': 0, 'modestbranding': 1 },
-				videoId: '<?php echo $videoid ?>',
-				events: {
-					'onReady': onPlayerReady,
-					'onStateChange': onPlayerStateChange
-				}
-			});
-		}
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('player', {
+                    height: '200',
+                    width: '300',
+                    playerVars: {'controls': 0, 'modestbranding': 1, 'autohide': 1, 'showinfo': 0},
+                    videoId: '<?php echo $videoid ?>',
+                    events: {
+                        'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange
+                    }
+                });
+                var slider = document.getElementById("myRange");
+                slider.min = 0;
+                slider.step = 1;
 
-		// 4. The API will call this function when the video player is ready.
-		function onPlayerReady(event) {
-			// event.target.playVideo();
-		}
+            }
 
-		// 5. The API calls this function when the player's state changes.
-		//    The function indicates that when playing a video (state=1),
-		//    the player should play for six seconds and then stop.
+            // 4. The API will call this function when the video player is ready.
+            function onPlayerReady(event) {
+                // event.target.playVideo();
+            }
 
-		var done = false;
+            function play() {
+                player.playVideo();
+                var slider = document.getElementById("myRange");
+                slider.max = player.getDuration();
+                slider.value = player.getCurrentTime();
+                setInterval(updateTiming, 1000);
+            }
 
-		function onPlayerStateChange(event) {
-			if (event.data == YT.PlayerState.PLAYING && !done) {
-				done = true;
-			}
-		}
-		/*
-      function seekVideo() {
-		  console.log("CYA");
-		  var l = document.querySelectorAll('span[id^="time_"]');
-		  var rev = [].slice.call(l, 0).reverse();
-		  var found = false;
-		  for (let i = 0; i < rev.length; i++) {
-			  if (!found){
-			  	let ts = parseInt(rev[i].id.split("_")[1]);
-			  	if (player.getCurrentTime < ts) {
-					found = true;
-					rev[i-1].style.textDecoration = 'underline';
-					rev[i].style.textDecoration = 'none';
-				}
-			  } else {
-				  rev[i].style.textDecoration = 'none';
-			  }
-		  }
-		  
-      }*/
-	</script>
+            function updateTiming(seconds = player.getCurrentTime()) {
+                let slider = document.getElementById("myRange");
+                let min = document.getElementById("min");
+                let sec = document.getElementById("sec");
+                let time = seconds;
+                let min_value = Math.floor(player.getCurrentTime() / 60);
+                let sec_value = Math.floor(player.getCurrentTime() % 60);
+                slider.value = player.getCurrentTime();
+                min.innerText = pad(min_value,2);
+                sec.innerText = pad(sec_value,2);
+            }
+            function pad(n, width, z) {
+                z = z || '0';
+                n = n + '';
+                return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+            }
+
+            function pause() {
+                player.pauseVideo();
+            }
+
+            function seek(seconds) {
+                player.seekTo(seconds, true);
+                updateTiming(seconds);
+            }
+
+            // 5. The API calls this function when the player's state changes.
+            //    The function indicates that when playing a video (state=1),
+            //    the player should play for six seconds and then stop.
+
+            var done = false;
+
+            function onPlayerStateChange(event) {
+                let play = document.getElementById("play-button");
+                let pause = document.getElementById("pause-button");
+                if (event.data == YT.PlayerState.PLAYING) {
+                    play.style.display = 'none';
+                    pause.style.display = 'block';
+                } else if (event.data == YT.PlayerState.PAUSED) {
+                    play.style.display = 'block';
+                    pause.style.display = 'none';
+                }
+            }
+
+            /*
+         function seekVideo() {
+             console.log("CYA");
+             var l = document.querySelectorAll('span[id^="time_"]');
+             var rev = [].slice.call(l, 0).reverse();
+             var found = false;
+             for (let i = 0; i < rev.length; i++) {
+                 if (!found){
+                     let ts = parseInt(rev[i].id.split("_")[1]);
+                     if (player.getCurrentTime < ts) {
+                       found = true;
+                       rev[i-1].style.textDecoration = 'underline';
+                       rev[i].style.textDecoration = 'none';
+                   }
+                 } else {
+                     rev[i].style.textDecoration = 'none';
+                 }
+             }
+
+         }*/
+        </script>
 
 	<?php
 		} 
@@ -141,11 +197,14 @@
 		<label class="switch">
 			<script>
 				function handleClick(cb) {
-					var pl = document.querySelector("iframe[id=player]");
+					var pl = document.querySelector("div[class=modal-player]");
+					var controls = document.querySelector("div[id=cmd]");
 					if (cb.checked) {
+						controls.style.visibility = 'visible';
 						pl.style.maxWidth = "100%"
 						//pl.style.visibility = 'visible';
 					} else {
+						controls.style.visibility = 'hidden';
 						pl.style.maxWidth = "0%"
 						//pl.style.visibility = 'hidden';
 					}
