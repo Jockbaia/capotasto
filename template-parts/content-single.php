@@ -43,9 +43,11 @@
 		<div id="excerpt">
 			<?php the_excerpt(); ?>
 		</div>
-
+		
 	</div><!-- .entry-content -->
 
+	<?php the_ad(32946); ?>
+	
 	<?php
 			$str = get_field(video_youtube);
 			$videoid = substr($str, strrpos($str, '=') + 1);
