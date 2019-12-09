@@ -56,6 +56,17 @@
 		?>
 
 	<!-- <iframe id="youtube-player" width="560" height="300" src="https://www.youtube-nocookie.com/embed/<?php echo $videoid ?>?rel=0&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+	<div id="cmd-mobile" class="controls">
+    <div class="player-buttons"><i id="play-button-mobile" onclick="play()" class="fa fa-play"></i>
+        <i id="pause-button-mobile" onclick="pause()" class="fa fa-pause"></i>
+    </div>
+    <div class="slidecontainer">
+        <input type="range" value="0" class="player-slider" id="myRange-mobile" oninput="seek(this.value)">
+    </div>
+    <div class="timing">
+        <span id="min-mobile">00</span>:<span id="sec-mobile">00</span>
+    </div>
+</div>
 	<div class="modal-player">
 		<div id="cmd" class="controls"><i id="play-button" onclick="play()" class="fa fa-play"></i><i id="pause-button"
                                                                                                   onclick="pause()"
@@ -86,8 +97,11 @@
                     }
                 });
                 var slider = document.getElementById("myRange");
+				var sliderMobile = document.getElementById("myRange-mobile");
                 slider.min = 0;
                 slider.step = 1;
+				sliderMobile.min = 0;
+                sliderMobile.step = 1;
 
             }
 
@@ -99,8 +113,11 @@
             function play() {
                 player.playVideo();
                 var slider = document.getElementById("myRange");
+				var sliderMobile = document.getElementById("myRange-mobile");
                 slider.max = player.getDuration();
                 slider.value = player.getCurrentTime();
+				sliderMobile.max = player.getDuration();
+                sliderMobile.value = player.getCurrentTime();
                 setInterval(updateTiming, 1000);
             }
 
@@ -108,12 +125,20 @@
                 let slider = document.getElementById("myRange");
                 let min = document.getElementById("min");
                 let sec = document.getElementById("sec");
+				
+				let sliderMobile = document.getElementById("myRange-mobile");
+                let minMobile = document.getElementById("min-mobile");
+                let secMobile = document.getElementById("sec-mobile");
+				
                 let time = seconds;
                 let min_value = Math.floor(player.getCurrentTime() / 60);
                 let sec_value = Math.floor(player.getCurrentTime() % 60);
                 slider.value = player.getCurrentTime();
+				sliderMobile.value = player.getCurrentTime();
                 min.innerText = pad(min_value,2);
                 sec.innerText = pad(sec_value,2);
+				minMobile.innerText = pad(min_value,2);
+                secMobile.innerText = pad(sec_value,2);
             }
             function pad(n, width, z) {
                 z = z || '0';
@@ -139,12 +164,18 @@
             function onPlayerStateChange(event) {
                 let play = document.getElementById("play-button");
                 let pause = document.getElementById("pause-button");
+				let playMobile = document.getElementById("play-button-mobile");
+                let pauseMobile = document.getElementById("pause-button-mobile");
                 if (event.data == YT.PlayerState.PLAYING) {
                     play.style.display = 'none';
                     pause.style.display = 'block';
+                    playMobile.style.display = 'none';
+                    pauseMobile.style.display = 'block';
                 } else if (event.data == YT.PlayerState.PAUSED) {
                     play.style.display = 'block';
                     pause.style.display = 'none';
+					playMobile.style.display = 'block';
+                    pauseMobile.style.display = 'none';
                 }
             }
 
@@ -199,12 +230,15 @@
 				function handleClick(cb) {
 					var pl = document.querySelector("div[class=modal-player]");
 					var controls = document.querySelector("div[id=cmd]");
+					var controlsMobile = document.querySelector("div[id=cmd-mobile]");
 					if (cb.checked) {
 						controls.style.visibility = 'visible';
+						controlsMobile.style.visibility = 'visible';
 						pl.style.maxWidth = "100%"
 						//pl.style.visibility = 'visible';
 					} else {
 						controls.style.visibility = 'hidden';
+						controlsMobile.style.visibility = 'hidden';
 						pl.style.maxWidth = "0%"
 						//pl.style.visibility = 'hidden';
 					}

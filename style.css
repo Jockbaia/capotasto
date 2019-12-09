@@ -16,19 +16,27 @@ Tags: two-columns, right-sidebar
 .modal-player {
   max-width: 0%;
   position: fixed !important;
-  bottom: 150px !important;
-  right: 10px !important;
-  width: 150px !important;
-  height: 100px !important;
+  bottom: 30px !important;
+right: 0px !important;
+width: 150px !important;
   z-index: 999 !important;
   -webkit-transition: 1s;
 }
-
+#cmd-mobile{
+	display: flex  !important;
+	position:fixed  !important;
+    bottom: 0px  !important;
+    width:100%  !important;
+	z-index: 999  !important;
+}
+#cmd{
+	display:none !important;
+}
 .slidercontainer {
 	padding: 0 10px;
 }
 
-	#pause-button{
+#pause-button, #pause-button-mobile{
     display: none;
 }
 
@@ -4279,6 +4287,12 @@ modmenu a:visited {
     z-index: 999 !important;
     -webkit-transition: 1s;
   }
+#cmd-mobile{
+	display: none !important;
+}
+#cmd{
+	display:flex !important;
+}
 
 }
 
