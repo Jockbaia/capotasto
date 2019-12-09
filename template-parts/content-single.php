@@ -57,8 +57,8 @@
 
 	<!-- <iframe id="youtube-player" width="560" height="300" src="https://www.youtube-nocookie.com/embed/<?php echo $videoid ?>?rel=0&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
 	<div id="cmd-mobile" class="controls">
-    <div class="player-buttons"><i id="play-button-mobile" onclick="play()" class="fa fa-play"></i>
-        <i id="pause-button-mobile" onclick="pause()" class="fa fa-pause"></i>
+    <div class="player-buttons"><i id="backward-button-mobile" onclick="backward()" class="fas fa-backward"></i><i id="play-button-mobile" onclick="play()" class="fa fa-play"></i>
+        <i id="pause-button-mobile" onclick="pause()" class="fa fa-pause"></i><i id="forward-button-mobile" onclick="forward()" class="fas fa-forward"></i>
     </div>
     <div class="slidecontainer">
         <input type="range" value="0" class="player-slider" id="myRange-mobile" oninput="seek(this.value)">
@@ -68,9 +68,9 @@
     </div>
 </div>
 	<div class="modal-player">
-		<div id="cmd" class="controls"><i id="play-button" onclick="play()" class="fa fa-play"></i><i id="pause-button"
+		<div id="cmd" class="controls"><i id="backward-button" onclick="backward()" class="fas fa-backward"></i><i id="play-button" onclick="play()" class="fa fa-play"></i><i id="pause-button"
                                                                                                   onclick="pause()"
-                                                                                                  class="fa fa-pause"></i>
+                                                                                                  class="fa fa-pause"></i><i id="forward-button" onclick="forward()" class="fas fa-forward"></i>
         <div class="slidercontainer">
             <input type="range" value="0" class="player-slider" id="myRange" oninput="seek(this.value)">
         </div>
@@ -154,6 +154,16 @@
                 player.seekTo(seconds, true);
                 updateTiming(seconds);
             }
+		
+			function backward() {
+                player.seekTo(player.getCurrentTime() - 10, true);
+                updateTiming(player.getCurrentTime() - 10);
+            }
+		
+			function forward() {
+                player.seekTo(player.getCurrentTime() + 10, true);
+                updateTiming(player.getCurrentTime() + 10);
+            }
 
             // 5. The API calls this function when the player's state changes.
             //    The function indicates that when playing a video (state=1),
@@ -168,13 +178,13 @@
                 let pauseMobile = document.getElementById("pause-button-mobile");
                 if (event.data == YT.PlayerState.PLAYING) {
                     play.style.display = 'none';
-                    pause.style.display = 'block';
+                    pause.style.display = 'inline-block';
                     playMobile.style.display = 'none';
-                    pauseMobile.style.display = 'block';
+                    pauseMobile.style.display = 'inline-block';
                 } else if (event.data == YT.PlayerState.PAUSED) {
-                    play.style.display = 'block';
+                    play.style.display = 'inline-block';
                     pause.style.display = 'none';
-					playMobile.style.display = 'block';
+					playMobile.style.display = 'inline-block';
                     pauseMobile.style.display = 'none';
                 }
             }

@@ -22,6 +22,22 @@ width: 150px !important;
   z-index: 999 !important;
   -webkit-transition: 1s;
 }
+.slidercontainer{
+    flex: 0 1 70%;
+		padding: 0 10px;
+
+}
+.timing{
+    flex: 0 1 10%;
+    text-align: center;
+}
+.player-buttons{
+    text-align: center;
+    flex: 0 1 20%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
 iframe#player {
   height: 100px;
 }
@@ -35,9 +51,6 @@ iframe#player {
 }
 #cmd{
 	display:none !important;
-}
-.slidercontainer {
-	padding: 0 10px;
 }
 
 #pause-button, #pause-button-mobile{
