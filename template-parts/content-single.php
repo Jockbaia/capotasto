@@ -68,9 +68,10 @@
     </div>
 </div>
 	<div class="modal-player">
-		<div id="cmd" class="controls"><i id="backward-button" onclick="backward()" class="fas fa-backward"></i><i id="play-button" onclick="play()" class="fa fa-play"></i><i id="pause-button"
+		<div id="cmd" class="controls">
+			<div class="player-buttons"><i id="backward-button" onclick="backward()" class="fas fa-backward"></i><i id="play-button" onclick="play()" class="fa fa-play"></i><i id="pause-button"
                                                                                                   onclick="pause()"
-                                                                                                  class="fa fa-pause"></i><i id="forward-button" onclick="forward()" class="fas fa-forward"></i>
+                                                                                                  class="fa fa-pause"></i><i id="forward-button" onclick="forward()" class="fas fa-forward"></i></div>
         <div class="slidercontainer">
             <input type="range" value="0" class="player-slider" id="myRange" oninput="seek(this.value)">
         </div>
