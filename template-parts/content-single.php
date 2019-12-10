@@ -90,7 +90,7 @@
                 player = new YT.Player('player', {
                     height: '200',
                     width: '300',
-                    playerVars: {'controls': 0, 'modestbranding': 1, 'autohide': 1, 'showinfo': 0},
+                    playerVars: {'controls': 0, 'modestbranding': 1, 'autohide': 1, 'showinfo': 0, 'playsinline': 1},
                     videoId: '<?php echo $videoid ?>',
                     events: {
                         'onReady': onPlayerReady,
