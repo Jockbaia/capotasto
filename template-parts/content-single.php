@@ -320,7 +320,7 @@
 	
 	</div>
 
-	<div class="watermark"><i style="color:#6f6f6f" class="fas fa-link"><i style="color:#b33b3b" class="fas fa-heart"></i> picopod.it/<?php the_ID(); ?></div>
+	<div class="watermark"><i style="color:#6f6f6f" class="fas fa-link"></i><i style="color:#b33b3b" class="fas fa-heart"></i> picopod.it/<?php the_ID(); ?></div>
 
 
 	<div id="accordi" class="accordi">
