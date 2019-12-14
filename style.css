@@ -23,7 +23,7 @@ width: 150px !important;
   -webkit-transition: 1s;
 }
 .slidercontainer{
-    flex: 0 1 70%;
+    flex: 0 1 50%;
 		padding: 0 10px;
 
 }
@@ -33,7 +33,7 @@ width: 150px !important;
 }
 .player-buttons{
     text-align: center;
-    flex: 0 1 20%;
+    flex: 0 1 30%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
