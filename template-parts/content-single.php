@@ -320,7 +320,7 @@
 	
 	</div>
 
-	<div class="watermark"><i style="color:#b33b3b" class="fas fa-user"></i> Scritti da <?php the_author(); ?>,  Altri accordi su Picopod.it</div>
+	<div class="watermark"><i style="color:#6f6f6f" class="fas fa-link"></i> picopod.it/<?php the_ID(); ?></div>
 
 
 	<div id="accordi" class="accordi">
