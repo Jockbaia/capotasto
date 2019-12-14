@@ -4164,9 +4164,7 @@ modmenu a:visited {
 
   .watermark {
     display: -webkit-inline-box;
-    color: #fff;
-    border-radius: 34px;
-    background-color: #b33b3b;
+    color: #b33b3b;
     padding-left: 10px;
     font-family: Roboto;
     font-size: 13px;
