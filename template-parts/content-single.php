@@ -70,7 +70,7 @@
 		</div>
 		<div class="modal-player">
 			<div id="cmd" class="controls">
-				<div class="player-buttons"><i id="backward-button" onclick="backward()"><img src="https://www.picopod.it/wp-content/themes/capotasto/assets/svg/replay10.svg" alt="replay10"></i><i id="play-button" onclick="play()" class="fa fa-play"></i><i id="pause-button" onclick="pause()" class="fa fa-pause"></i><i id="forward-button" onclick="forward()"><img src="https://www.picopod.it/wp-content/themes/capotasto/assets/svg/skip10.svg" alt="replay10"></i></div>
+				<div class="player-buttons"><img id="backward-button" onclick="backward()" src="https://www.picopod.it/wp-content/themes/capotasto/assets/svg/replay10.svg" alt="replay10"><i id="play-button" onclick="play()" class="fa fa-play"></i><i id="pause-button" onclick="pause()" class="fa fa-pause"></i><img id="forward-button" onclick="forward()" src="https://www.picopod.it/wp-content/themes/capotasto/assets/svg/skip10.svg" alt="replay10"></div>
 				<div class="slidercontainer">
 					<input type="range" value="0" class="player-slider" id="myRange" oninput="seek(this.value)">
 				</div>
