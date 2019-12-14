@@ -36,7 +36,8 @@ width: 150px !important;
     flex: 0 1 30%;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
 }
 iframe#player {
   height: 100px;
