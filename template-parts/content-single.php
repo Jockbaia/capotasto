@@ -317,10 +317,10 @@
     border-radius: 4px;
     cursor: pointer;
     margin-right: 3px;"><i class="fas fa-globe-europe"></i></i></a>
-
-		<div class="watermark"><i style="color:#ffffff" class="fas fa-user"></i> Scritti da <?php the_author(); ?></div>
-		<div class="watermark"><i style="color:#ffffff" class="fas fa-heart"></i> Altri accordi su Picopod.it</div>
+	
 	</div>
+
+	<div class="watermark"><i style="color:#b33b3b" class="fas fa-user"></i> Scritti da <?php the_author(); ?>,  Altri accordi su Picopod.it</div>
 
 
 	<div id="accordi" class="accordi">
