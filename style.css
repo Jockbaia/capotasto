@@ -4165,10 +4165,8 @@ modmenu a:visited {
   .watermark {
     display: -webkit-inline-box;
     color: #6f6f6f;
-    font-family: Roboto;
-    font-size: 13px;
-    padding-right: 10px;
-    text-transform: uppercase;
+    font-family: Scada;
+    font-size: 15px;
   }
 
   .site-header {
