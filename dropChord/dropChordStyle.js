@@ -100,7 +100,7 @@ function generateChord(element) {
         chord.appendChild(draggable_chord_header);
 
         let ch_bg = document.createElement("img");
-        ch_bg.src = "assets/chord.svg";
+        ch_bg.src = "https://www.picopod.it/wp-content/themes/capotasto/dropChord/assets/chord.svg";
         chord.appendChild(ch_bg);
 
         let fret_chord = document.createElement("div");
