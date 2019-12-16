@@ -113,7 +113,7 @@ function generateChord(element) {
 
         element.appendChild(chord);
 
-        const fileUrl = 'chords.json';// provide file location
+        const fileUrl = 'https://www.picopod.it/wp-content/themes/capotasto/dropChord/chords.json';// provide file location
 
         fetch(fileUrl)
             .then(r => r.text())
