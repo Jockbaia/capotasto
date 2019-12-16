@@ -1,12 +1,45 @@
-// Make the DIV element draggable:
-// dragElement(document.getElementById("chord"), document.getElementById("chord"));
-
+// JSON in JS
+var json_chord = "{\n" +
+    "  \"guitar\": {\n" +
+    "    \"DO\": {\n" +
+    "      \"chord\":  \"01023X\",\n" +
+    "      \"finger\": \"X1X23X\",\n" +
+    "      \"root\": \"0\",\n" +
+    "      \"fret\": 0\n" +
+    "    },\n" +
+    "    \"DOm\": {\n" +
+    "      \"chord\":  \"04550X\",\n" +
+    "      \"finger\": \"X243XX\",\n" +
+    "      \"root\": \"35\",\n" +
+    "      \"fret\": 0\n" +
+    "    },\n" +
+    "    \"RE\": {\n" +
+    "      \"chord\":  \"2320XX\",\n" +
+    "      \"finger\": \"231XXX\",\n" +
+    "      \"root\": \"0\",\n" +
+    "      \"fret\": 0\n" +
+    "    },\n" +
+    "    \"RE\": {\n" +
+    "      \"chord\":  \"2320XX\",\n" +
+    "      \"finger\": \"231XXX\",\n" +
+    "      \"root\": \"0\",\n" +
+    "      \"fret\": 0\n" +
+    "    }\n" +
+    "  },\n" +
+    "  \"piano\": [\n" +
+    "    {\n" +
+    "      \"DO\": {\n" +
+    "      }\n" +
+    "    }\n" +
+    "  ]\n" +
+    "}\n"
 let chords = document.querySelectorAll('span[class=chord]');
-for (let i = 0; i < chords.length; i++){
-    chords[i].addEventListener("mouseover", function(event) {
+for (let i = 0; i < chords.length; i++) {
+    chords[i].addEventListener("mouseover", function (event) {
         generateChord(event.target);
     });
 }
+
 function dragElement(elmnt, header) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     if (header) {
@@ -47,7 +80,8 @@ function dragElement(elmnt, header) {
         document.onmouseup = null;
         document.onmousemove = null;
     }
-    function closeChord(){
+
+    function closeChord() {
         elmnt.parentElement.removeChild(elmnt);
     }
 }
@@ -100,7 +134,7 @@ function generateChord(element) {
         chord.appendChild(draggable_chord_header);
 
         let ch_bg = document.createElement("img");
-        ch_bg.src = "https://www.picopod.it/wp-content/themes/capotasto/dropChord/assets/chord.svg";
+        ch_bg.src = "assets/chord.svg";
         chord.appendChild(ch_bg);
 
         let fret_chord = document.createElement("div");
@@ -113,42 +147,34 @@ function generateChord(element) {
 
         element.appendChild(chord);
 
-        const fileUrl = 'https://www.picopod.it/wp-content/themes/capotasto/dropChord/chords.json';// provide file location
 
-        fetch(fileUrl)
-            .then(r => r.text())
-            .then(r => {
-                var results = JSON.parse(r);
-                fret_chord.innerText = results.guitar[str_chord].fret === 0 ? '' : results.guitar[str_chord].fret.toString() + ' fret';
-                let chord_ch = results.guitar[str_chord].chord.toString().split('');
-                let finger_ch = results.guitar[str_chord].finger.toString().split('');
-                if (results.guitar[str_chord].root.toString() !== '0') {
-                    let ch_root = results.guitar[str_chord].root.toString().split('');
-                    let chord_string = document.createElement("div");
-                    chord_string.className += ' fret-root' + ' fr-' + ch_root[0] + ' r-' + ch_root[1];
-                    hover_chord.appendChild(chord_string);
+        var results = JSON.parse(json_chord);
+        fret_chord.innerText = results.guitar[str_chord].fret === 0 ? '' : results.guitar[str_chord].fret.toString() + ' fret';
+        let chord_ch = results.guitar[str_chord].chord.toString().split('');
+        let finger_ch = results.guitar[str_chord].finger.toString().split('');
+        if (results.guitar[str_chord].root.toString() !== '0') {
+            let ch_root = results.guitar[str_chord].root.toString().split('');
+            let chord_string = document.createElement("div");
+            chord_string.className += ' fret-root' + ' fr-' + ch_root[0] + ' r-' + ch_root[1];
+            hover_chord.appendChild(chord_string);
 
-                }
+        }
 
-                for (i = 0; i < chord_ch.length; i++) {
-                    let chord_string = document.createElement("div");
-                    if (chord_ch[i] === '0') continue;
-                    if (chord_ch[i] === 'X') {
-                        chord_string.className += ' fret-ics' + ' ch-' + (i + 1);
-                        hover_chord.appendChild(chord_string);
-                        continue;
-                    }
-                    chord_string.className += ' fret-finger' + ' ch-' + (i + 1) + ' fr-' + chord_ch[i];
-                    chord_string.innerText = finger_ch[i];
-                    hover_chord.appendChild(chord_string);
-                }
-                element.addEventListener('mouseout', makeMouseOutFn(element, chord), true);
-                dragElement(chord, draggable_chord_header);
-
-
-            });
+        for (i = 0; i < chord_ch.length; i++) {
+            let chord_string = document.createElement("div");
+            if (chord_ch[i] === '0') continue;
+            if (chord_ch[i] === 'X') {
+                chord_string.className += ' fret-ics' + ' ch-' + (i + 1);
+                hover_chord.appendChild(chord_string);
+                continue;
+            }
+            chord_string.className += ' fret-finger' + ' ch-' + (i + 1) + ' fr-' + chord_ch[i];
+            chord_string.innerText = finger_ch[i];
+            hover_chord.appendChild(chord_string);
+        }
+        element.addEventListener('mouseout', makeMouseOutFn(element, chord), true);
+        dragElement(chord, draggable_chord_header);
     }
-
 
 
 }
