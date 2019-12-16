@@ -26,6 +26,8 @@
 <link rel="manifest" href="/manifest.json" />
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
 <script src="/script/vibrant.min.js"></script>
+<link rel="stylesheet" href="https://www.picopod.it/wp-content/themes/capotasto/dropChord/dropChordStyle.css">
+
 	
 <?php wp_head(); ?>
 <?php
