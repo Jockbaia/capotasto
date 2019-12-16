@@ -366,5 +366,7 @@
 		?>
 	</div><!-- .entry-tags -->
 
+	<script src="https://www.picopod.it/script/backToTop.js?ver=7.0"></script> 
+	<script src="https://www.picopod.it/script/autoscrollMack.js?ver=1.12"></script>
 	<script src="https://www.picopod.it/wp-content/themes/capotasto/dropChord/dropChordStyle.js"></script>
 </article><!-- #post-## -->
