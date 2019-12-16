@@ -366,5 +366,5 @@
 		?>
 	</div><!-- .entry-tags -->
 
-	<script src="http://www.picopod.it/wp-content/themes/capotasto/dropChord/dropChordStyle.js"></script>
+	<script src="https://www.picopod.it/wp-content/themes/capotasto/dropChord/dropChordStyle.js"></script>
 </article><!-- #post-## -->
