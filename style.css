@@ -50,7 +50,7 @@ iframe#player {
 #cmd-mobile {
   display           : flex !important;
   position          : fixed !important;
-  bottom            : -50px;
+  bottom            : -500px;
   width             : 100% !important;
   z-index           : 999 !important;
   -webkit-transition: 1s;

@@ -251,7 +251,7 @@
 							//pl.style.maxWidth = "100%"
 							//pl.style.visibility = 'visible';
 						} else {
-							controlsMobile.style.bottom = '-50px';
+							controlsMobile.style.bottom = '-500px';
 							pl.style.right = "-300px";
 							//pl.style.maxWidth = "0%"
 							//pl.style.visibility = 'hidden';
