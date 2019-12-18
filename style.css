@@ -82,10 +82,6 @@ iframe#player {
   padding: 0 10px;
 }
 
-#player {
-  pointer-events: none;
-}
-
 .player-slider {
   -webkit-appearance: none;
   width             : 100%;
