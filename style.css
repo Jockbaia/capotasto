@@ -16,7 +16,7 @@ Tags       : two-columns, right-sidebar
 .modal-player {
   /*max-width       : 0%;*/
   position          : fixed !important;
-  bottom            : 30px !important;
+  bottom            : 40px !important;
   right             : -300px;
   width             : 150px !important;
   z-index           : 999 !important;
