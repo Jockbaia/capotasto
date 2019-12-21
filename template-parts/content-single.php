@@ -58,8 +58,8 @@
 
 		<!-- <iframe id="youtube-player" width="560" height="300" src="https://www.youtube-nocookie.com/embed/<?php echo $videoid ?>?rel=0&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
 		<div id="cmd-mobile" class="controls">
-			<div class="player-buttons"><i id="backward-button-mobile" onclick="backward()"><img src="https://www.picopod.it/wp-content/themes/capotasto/assets/svg/replay10.svg" alt="replay10"></i><i id="play-button-mobile" onclick="play()" class="fa fa-play"></i>
-				<i id="pause-button-mobile" onclick="pause()" class="fa fa-pause"></i><i id="forward-button-mobile" onclick="forward()"><img src="https://www.picopod.it/wp-content/themes/capotasto/assets/svg/skip10.svg" alt="replay10"></i>
+			<div class="player-buttons"><img id="backward-button-mobile" onclick="backward()" src="https://www.picopod.it/wp-content/themes/capotasto/assets/svg/replay10.svg" alt="replay10"><i id="play-button-mobile" onclick="play()" class="fa fa-play"></i>
+				<i id="pause-button-mobile" onclick="pause()" class="fa fa-pause"></i><img id="forward-button-mobile" onclick="forward()" src="https://www.picopod.it/wp-content/themes/capotasto/assets/svg/skip10.svg" alt="replay10">
 			</div>
 			<div class="slidecontainer">
 				<input type="range" value="0" class="player-slider" id="myRange-mobile" oninput="seek(this.value)">
