@@ -46,15 +46,15 @@
 		</div>
 
 	</div><!-- .entry-content -->
-
-	<?php the_ad(32946); ?>
-
+	<div class="content-banner">
+		<?php the_ad(32946); ?>
+	</div>
 	<?php
 	$video_str = get_field(video_youtube);
 	$videoid = substr($video_str, strrpos($video_str, '=') + 1);
 
 	if (!empty($video_str)) {
-		?>
+	?>
 
 		<!-- <iframe id="youtube-player" width="560" height="300" src="https://www.youtube-nocookie.com/embed/<?php echo $videoid ?>?rel=0&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
 		<div id="cmd-mobile" class="controls">
@@ -366,8 +366,8 @@
 		?>
 	</div><!-- .entry-tags -->
 
-	<script src="https://www.picopod.it/script/backToTop.js?ver=7.0"></script> 
-	
+	<script src="https://www.picopod.it/script/backToTop.js?ver=7.0"></script>
+
 	<script src="https://www.picopod.it/script/autoscrollMack.js?ver=1.12"></script>
 	<!-- <script src="https://www.picopod.it/wp-content/themes/capotasto/dropChord/dropChordStyle.js"></script> -->
 </article><!-- #post-## -->

@@ -4162,7 +4162,7 @@ modmenu a:visited {
 
 @media print {
 
-  .adsbygoogle{
+  .content-banner{
     display: none;
   }
 
