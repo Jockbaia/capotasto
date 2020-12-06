@@ -18,7 +18,9 @@ get_header(); ?>
 				<?php single_cat_title(''); ?>
 			</h1>	
 		</div><!-- .breadcrumbs -->
-			<?php if (function_exists('z_taxonomy_image')) z_taxonomy_image(); ?>
+			<div class="category-image">
+				<?php if (function_exists('z_taxonomy_image')) z_taxonomy_image(); ?>
+			</div>
 			<div class="category-description">
 				<?php echo category_description( $category_id ); ?> 
 			</div>

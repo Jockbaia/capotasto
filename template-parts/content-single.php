@@ -47,7 +47,7 @@
 
 	</div><!-- .entry-content -->
 	<div class="content-banner">
-		<?php the_ad(32946); ?>
+		<?php the_ad_group(954); ?>
 	</div>
 	<?php
 	$video_str = get_field(video_youtube);
@@ -229,7 +229,11 @@
 
 	<div class="resizer2">
 
-		<div class="nickUserbox"><a href="<?php echo get_site_url(); ?>/author/<?php echo get_the_author_meta('nickname'); ?>"><i class="fas fa-user"></i> <?php the_author(); ?></a></div>
+		<!-- <div class="nickUserbox"><a href="<?php echo get_site_url(); ?>/author/<?php echo get_the_author_meta('nickname'); ?>"><i class="fas fa-user"></i> <?php the_author(); ?></a></div> -->
+		<div class="nickUserbox"><i class="fas fa-microphone"></i> <?php
+                $category = get_the_category();
+                echo '<a href="'.get_category_link($category[0]->cat_ID).'"> ' . $category[0]->cat_name . '</a>';
+            ?></div>
 
 		<div class="printUserbox"><i class="fas fa-print"></i> <a href="#" onclick="ga('send', {hitType: 'event',  eventCategory: 'Interaction', eventAction: 'print', eventLabel: '<?php the_ID(); ?>'});window.print();return false;">Stampa</a>
 		</div>
@@ -239,7 +243,8 @@
 
 	<div class="resizer">
 		<?php if (!empty($video_str)) { ?>
-			<label class="switch">
+
+			<!-- <label class="switch">
 				<script>
 					function handleClick(cb) {
 						var pl = document.querySelector("div[class=modal-player]");
@@ -260,12 +265,47 @@
 				</script>
 				<input type="checkbox" name="slider" onclick='handleClick(this);'>
 				<span class="slider round"></span>
-			</label>
+			</label> -->
 		<?php } ?>
 		<?php if (function_exists('fontResizer_place')) {
 			fontResizer_place();
 		} ?>
-
+		<?php if (!empty($video_str)) { ?>
+		<script>
+					let checked = 0
+					function handleClick(cb) {
+						var pl = document.querySelector("div[class=modal-player]");
+						var controls = document.querySelector("div[id=cmd]");
+						var controlsMobile = document.querySelector("div[id=cmd-mobile]");
+						if (!checked) {
+							controlsMobile.style.bottom = '0px';
+							pl.style.right = "10px";
+							checked=1
+						} else {
+							controlsMobile.style.bottom = '-500px';
+							pl.style.right = "-300px";
+							checked=0
+						}
+					}
+		</script>
+		<a id="switch" onclick="handleClick(this);" style="font-family: Scada;
+    background-color: #b33b3b;
+    color: white;
+    padding: 0px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    float: left;
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: -4px;"><img data-skip-lazy style="
+	height: 72px;
+	width: 95px;
+    margin-bottom: -29px;
+    margin-top: -21px;
+    margin-left: -2px;" src="https://www.picopod.it/wp-content/themes/capotasto/assets/svg/youtube.svg"></a>
+		
+		<?php } ?>
 		<div id="autoscrollMack" class="autoscrollMack">
 			<a id="scroll_minus" onclick="scrollDec();" style="font-size: 18px;
 														  font-family: Scada;
@@ -338,36 +378,16 @@
 		));
 		?>
 	</div>
+
+<?php the_ad_group(1011);?>
+<?php the_ad_group(1013);?>
+
 	<div class="yarpp_related_posts">
 		<?php related_posts(); ?>
 	</div>
-	<div class="entry-content">
 
-		<?php
-		wp_link_pages(array(
-			'before' => '<div class="page-links">' . esc_html__('Pages:', 'revenue'),
-			'after'  => '</div>',
-		));
-		?>
-	</div><!-- .entry-content -->
-	<div class="entry-tags">
-		<?php if (has_tag()) { ?><span class="tag-links"><?php the_tags(' ', ' '); ?></span><?php } ?>
+	<script src="https://www.picopod.it/script/backToTop.js"></script>
 
-		<?php
-		edit_post_link(
-			sprintf(
-				/* translators: %s: Name of current post */
-				esc_html__('Edit %s', 'revenue'),
-				the_title('<span class="screen-reader-text">"', '"</span>', false)
-			),
-			'<span class="edit-link">',
-			'</span>'
-		);
-		?>
-	</div><!-- .entry-tags -->
-
-	<script src="https://www.picopod.it/script/backToTop.js?ver=7.0"></script>
-
-	<script src="https://www.picopod.it/script/autoscrollMack.js?ver=1.12"></script>
+	<script src="https://www.picopod.it/script/autoscrollMack.js"></script>
 	<!-- <script src="https://www.picopod.it/wp-content/themes/capotasto/dropChord/dropChordStyle.js"></script> -->
 </article><!-- #post-## -->

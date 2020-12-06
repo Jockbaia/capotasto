@@ -1,10 +1,11 @@
 <?php
+
 /**
- * revenue functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package revenue
+ *
  */
 
 if ( ! function_exists( 'revenue_setup' ) ) :
@@ -201,14 +202,14 @@ function revenue_scripts() {
 add_action( 'wp_enqueue_scripts', 'revenue_scripts' );
 
 /* Admin CSS Style */
+
 function revenue_admin_style() {
 	wp_enqueue_style('admin-styles', get_template_directory_uri().'/assets/css/admin.css');
 }
 add_action('admin_enqueue_scripts', 'revenue_admin_style');
 
-/**
- * Post Thumbnails.
- */
+/* Post Thumbnails */
+
 if ( function_exists( 'add_theme_support' ) ) { 
     add_theme_support( 'post-thumbnails' );
     set_post_thumbnail_size( 250, 250, true ); // default Post Thumbnail dimensions (cropped)
@@ -219,124 +220,31 @@ if ( function_exists( 'add_theme_support' ) ) {
     add_image_size( 'widget_post_thumb', 80, 80, true );                                    
 }
 
-/**
- * Registers custom widgets.
- */
-function revenue_widgets_init() {										
+/* Registers custom widgets */
 
+function revenue_widgets_init() {										
 }
+
 add_action( 'widgets_init', 'revenue_widgets_init' );
 
 /* Fix PHP warning */
+
 function _get($str){
     $val = !empty($_GET[$str]) ? $_GET[$str] : null;
     return $val;
 }
 
-/**
- * Disabling admin bar on frontend
- */
+/* Remove adminbar in frontend */
 
 add_action('after_setup_theme', 'remove_admin_bar');
  
 function remove_admin_bar() {
   show_admin_bar(false);
-
-}
-
-/**
- * WYSIWYG user role disabled
- */
-
-$user = wp_get_current_user();
-if ( in_array( 'author', (array) $user->roles ) ) {
-    add_filter( 'user_can_richedit' , '__return_false', 50 );
-}
-
-function wpa66834_role_admin_body_class( $classes ) {
-    global $current_user;
-    foreach( $current_user->roles as $role )
-        $classes .= ' role-' . $role;
-    return trim( $classes );
-}
-add_filter( 'admin_body_class', 'wpa66834_role_admin_body_class' );
-
-/**
- * HOOKS FRONTEND
- */
-
-/**
-* Update the custom field when the form submits
-*
-* @param type $post_id
-*/
-function update_title_hook($post_id) {
-	//PC::debug($_POST, 'update_title_hook');
-	$first_set = false;
-	// unhook this function so it doesn't loop infinitely
-	remove_action('save_post', 'update_title_hook');
-	if ( isset( $_POST['titolo_del_brano'] ) && isset( $_POST['artista'] ) ) {
-		$my_post = array(
-      		'ID'           => $post_id,
-     		'post_title'   => $_POST['titolo_del_brano'] . ' - ' . $_POST['artista']
-  		);
-		wp_update_post( $my_post );
-	}
-	if ( isset( $_POST['artista'])){
-		$arrartist = explode (",", $_POST['artista']);
-		foreach ($arrartist as &$artist) {
-			// Shrink all spaces to one
-			$foo = preg_replace('/\s+/', ' ', $artist);
-			// From space to dash and tolower
-			$foo = str_replace(' ', '-', strtolower($foo));
-			$cat = get_category_by_slug($foo); 
-			$artist = $cat->term_id;
-		}
-		wp_set_post_categories($post_id, $arrartist, false);
-		
-		
-	}
-	if ( isset( $_POST['anno'] ) ) {
-		wp_set_post_terms( $post_id, $_POST['anno'], 'post_tag', $first_set );
-		$first_set = true;
-	}
-	
-	if ( isset( $_POST['genere'] ) && $_POST['genere'] != -1) {
-		wp_set_post_terms( $post_id, $_POST['genere'], 'post_tag', $first_set );
-		$first_set = true;
-	}
-	
-	if ( isset( $_POST['nazionalita'] ) && $_POST['nazionalita'] != -1) {
-		wp_set_post_terms( $post_id, $_POST['nazionalita'], 'post_tag', $first_set);
-		$first_set = true;
-	}
-	// re-hook this function
-	add_action('save_post', 'update_title_hook');
 }
 
 
-add_action( 'wpuf_add_post_after_insert', 'update_title_hook' );
-add_action( 'wpuf_edit_post_after_update', 'update_title_hook' );
-//add_action( 'wpuf_draft_post', 'update_title_hook' );
+/* Alphabetic archives */
 
-add_action( 'save_post', 'update_title_hook');
-
-
-// DASHBOARD REDIRECT 
-
-function dashboard_redirect(){
-    wp_redirect(admin_url('edit.php'));
-}
-add_action('load-index.php','dashboard_redirect');
-
-function login_redirect( $redirect_to, $request, $user ){
-    return admin_url('edit.php');
-}
-add_filter('login_redirect','login_redirect',10,3);
-
-/**
- * Alphabetic Archives
- * */
 function alpha_order($query) {
     // validate
     if(!is_admin() && $query->is_main_query()) {
@@ -353,3 +261,17 @@ function alpha_order($query) {
     }
 }
 add_action('pre_get_posts', 'alpha_order');
+
+/* rimozione richedit nei post */
+
+add_filter( 'user_can_richedit', function ( $default ) {
+	global $post;
+	if ( $post->post_type == 'post' ) {
+		return false;
+	}
+
+	return $default;
+} );
+
+
+

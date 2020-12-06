@@ -20,14 +20,12 @@
 <meta name="theme-color" content="#b33b3b">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <?php if (get_theme_mod('favicon', '') != null) { ?>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script> -->
 <link rel="icon" type="image/png" href="<?php echo esc_url( get_theme_mod('favicon', '') ); ?>" />
 <?php } ?>
 <link rel="manifest" href="/manifest.json" />
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
+<!--<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> -->
 <script src="/script/vibrant.min.js"></script>
-<link rel="stylesheet" href="https://www.picopod.it/wp-content/themes/capotasto/dropChord/dropChordStyle.css">
-
 	
 <?php wp_head(); ?>
 <?php
@@ -144,6 +142,7 @@
     enable_page_level_ads: true
   });
 </script>
+	
 <!-- Google Analytics -->
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -176,9 +175,9 @@ ga('send', 'pageview');
 					<?php
 if ( is_user_logged_in() ) {
 ?>
-					<img src="https://www.picopod.it/wp-content/uploads/2019/07/loggedIn.png" alt=""/>
+					<img src="https://www.picopod.it/wp-content/uploads/2020/09/logo.png" alt=""/>
 					<?php } else { ?>
-					<img src="https://www.picopod.it/wp-content/uploads/2019/07/loggedOut.png" alt=""/>
+					<img src="https://www.picopod.it/wp-content/uploads/2020/09/logo.png" alt=""/>
 						<?php } ?>
 				</a>
 			</div><!-- #logo -->
@@ -230,7 +229,7 @@ if ( is_user_logged_in() ) {
 	</header><!-- #masthead -->	
 	
 	<div class="topBanner">
-		<?php the_ad(24745); ?>
+		<?php the_ad_group(955); ?>
 	</div>
 
 <div id="content" class="site-content container clear">

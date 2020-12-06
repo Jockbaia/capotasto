@@ -13,11 +13,7 @@ if ( function_exists( 'revenue_set_post_views' ) ) :
 	revenue_set_post_views(get_the_ID());
 endif;
 ?>
-	<!-- <div id="autoscrollMack" class="autoscrollMack">
-		<img id="scroll_plus" onclick="scrollInc();" src="http://icons.iconarchive.com/icons/hopstarter/button/24/Button-Previous-icon.png">
-		<img id="scroll_reset" onclick="scrollReset();" src="http://icons.iconarchive.com/icons/hopstarter/button/24/Button-Previous-icon.png">
-		<img id="scroll_minus" onclick="scrollDec();" src="http://icons.iconarchive.com/icons/hopstarter/button/24/Button-Previous-icon.png"/>
-	</div> -->
+
 	<div id="primary" class="content-area">
 
 		<main id="main" class="site-main" >

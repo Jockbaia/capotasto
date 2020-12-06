@@ -1,5 +1,11 @@
 <?php get_header(); ?>
 
+<a href="https://www.picopod.it/artista/italiani/sfera-ebbasta/">
+	<div class="mainStage">
+		<img src="https://www.picopod.it/wp-content/uploads/2020/11/ebbasta.jpg">
+	</div>
+</a>
+
 	<div id="primary" class="content-area clear">	
 
 		<?php if (get_theme_mod('featured-content-on', 'true') == true ) { ?>
@@ -89,9 +95,6 @@
 
 		<main id="main" class="site-main clear">
 			
-			<div class="homepager">
-				<?php echo do_shortcode("[slide-anything id='26304']"); ?>
-			</div>
 			<div id="recent-content" class="content-list">
 
 				<?php

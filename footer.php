@@ -51,7 +51,7 @@
 
 			<div class="site-info">
 
-			<a href="http://www.jockbaia.it/"><img src="https://i.imgur.com/lE6QK6u.png"></a>
+			<a href="https://www.instagram.com/jockbaia"><img src="https://i.imgur.com/lE6QK6u.png"></a>
 				
 			</div><!-- .site-info -->
 
