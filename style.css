@@ -1452,6 +1452,20 @@ input:checked+.slider:before {
   font-family: Varela Round;
 }
 
+#back-top a:hover span,
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus,
+.pagination .page-numbers:hover,
+.pagination .page-numbers.current,
+.widget_newsletter input[type="submit"],
+.widget_newsletter input[type="button"],
+.widget_newsletter button {
+  background-color: #b33b3b;
+  border-radius: 5px;
+  border: 1px solid #883f3f;
+}
+
 .message {
   border: 1px solid #faebcc;
   background-color: #fcf8e3;
