@@ -42,9 +42,9 @@ margin-bottom: 0px !important;
 }
 	
 	.site-branding img {
-    max-height: 62px;
-    vertical-align: middle;
-    margin-left: 6px;
+        max-height: 62px;
+        padding-left: 10px;
+        padding-top: 13px;
 }
 	
 	.content-search {
@@ -609,8 +609,9 @@ border-top: 0px;
     }
 
     .site-branding img {
-        max-height: 45px;
-padding-left: 10px;
+        max-height: 62px;
+        padding-left: 10px;
+        padding-top: 13px;
     }
 
     .site-title {
