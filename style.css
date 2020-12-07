@@ -1101,6 +1101,7 @@ input:checked+.slider:before {
   padding: 0 10px;
   text-transform: uppercase;
   border-radius: 0px 8px 8px 0px;
+  background-color: #b33b3b;
 }
 
 .header-search .search-submit:hover {
