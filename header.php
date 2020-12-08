@@ -66,12 +66,12 @@
 
 				<?php if (get_theme_mod('header-search-on', true)) : ?>
 
-					<span class="search-icon">
+					<span class="search-icon" onclick="(document.getElementById('header-search').style.display == 'none') ? document.getElementById('input-search').focus() : document.getElementById('input-search').blur()">
 						<span class="genericon genericon-search" onclick="document.getElementById('input-search').focus();"></span>
 						<span class="genericon genericon-close" onclick="document.getElementById('input-search').blur();"></span>
 					</span>
 
-					<div class="header-search">
+					<div class="header-search" id="header-search">
 						<form id="searchform" method="get" action="<?php echo esc_url(home_url('/')); ?>">
 							<input type="search" id="input-search" name="s" class="search-input" placeholder="Cerca su Picopod" autocomplete="off" autofocus>
 							<button type="submit" class="search-submit"><?php echo __('Vai', 'revenue'); ?></button>
