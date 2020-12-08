@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Header file for the Twenty Twenty WordPress default theme.
  *
@@ -32,12 +33,12 @@
 			<div class="container">
 				<div class="site-branding">
 
-				<!-- LOGO -->
+					<!-- LOGO -->
 
 					<div id="logo">
-							<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-								<img src="https://www.picopod.it/wp-content/uploads/2020/09/logo.png" alt="" />
-							</a>
+						<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+							<img src="https://www.picopod.it/wp-content/uploads/2020/09/logo.png" alt="" />
+						</a>
 					</div>
 
 				</div>
