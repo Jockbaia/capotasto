@@ -66,9 +66,9 @@
 
 				<?php if (get_theme_mod('header-search-on', true)) : ?>
 
-					<span class="search-icon" onclick="(document.getElementById('header-search').style.display == 'none') ? document.getElementById('input-search').focus() : document.getElementById('input-search').blur()">
-						<span class="genericon genericon-search" onclick="document.getElementById('input-search').focus();"></span>
-						<span class="genericon genericon-close" onclick="document.getElementById('input-search').blur();"></span>
+					<span class="search-icon" onclick="inputFocus()">
+						<span class="genericon genericon-search"></span>
+						<span class="genericon genericon-close"></span>
 					</span>
 
 					<div class="header-search" id="header-search">

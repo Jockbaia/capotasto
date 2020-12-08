@@ -288,3 +288,11 @@ function load_scripts()
 }
 
 add_action('wp_enqueue_scripts', 'load_scripts');
+
+function capotasto_utilities()
+{
+	wp_register_script( 'capotasto_utilities', get_template_directory_uri() . '/js/themeUtility.js', array( ), NULL, true );
+	wp_enqueue_script('capotasto_utilities');
+}
+
+add_action('wp_enqueue_scripts', 'capotasto_utilities');
