@@ -283,7 +283,7 @@ add_filter('user_can_richedit', function ($default) {
 
 function load_scripts()
 {
-	wp_register_script( 'youtube', get_template_directory_uri() . '/js/gdgt-base.js', array( 'jquery' ), NULL, true );
+	wp_register_script( 'youtube', get_template_directory_uri() . '/js/youtube.js', array( ), NULL, true );
 	wp_enqueue_script('youtube');
 }
 
