@@ -75,7 +75,7 @@
 					<span id="min">00</span>:<span id="sec">00</span>
 				</div>
 			</div>
-			<div id="player"></div>
+			<div id="player"><?php echo $videoid ?></div>
 		</div>
 
 	<?php
