@@ -2,113 +2,126 @@
 
 @media only screen and (max-width: 959px) and (min-width: 768px) {
 
-	.mainStage img {
-    border-radius: 0px !important;
-}
-	.category-image img {
-		border-radius: 0px;
-	}
-	.content-banner {
-		background-color: #efefef !important;
-    padding: 16px 0 !important;
-	}
-	
-	.content-loop .hentry, .content-list .hentry, .content-grid .hentry {
-    padding: 0px 20px;
-}
-	
-	.slicknav_btn {
-    margin: 28px 65px 27px;
-}
-	
-	.breadcrumbs  {
-    margin-bottom: 0px !important;
-border-radius: 0px !important;
-margin-bottom: 0px !important;
-	}
-	
-	.category-description  {
-		margin-top: -7px;
-	}
-	
-	.single .entry-header {
-		margin-bottom: 15px !important;
-	}
-	
-	.error404 h1.entry-title, .single h1.entry-title, .page h1.entry-title {
-    font-size: 20px !important;
-    margin-bottom: 8px;
-    margin-top: 11px;
-}
-	
-	.site-branding img {
+    .mainStage img {
+        border-radius: 0px !important;
+    }
+
+    .category-image img {
+        border-radius: 0px;
+    }
+
+    .content-banner {
+        background-color: #efefef !important;
+        padding: 16px 0 !important;
+    }
+
+    .content-loop .hentry,
+    .content-list .hentry,
+    .content-grid .hentry {
+        padding: 0px 20px;
+    }
+
+    .slicknav_btn {
+        margin: 28px 65px 27px;
+    }
+
+    .breadcrumbs {
+        margin-bottom: 0px !important;
+        border-radius: 0px !important;
+        margin-bottom: 0px !important;
+    }
+
+    .category-description {
+        margin-top: -7px;
+    }
+
+    .single .entry-header {
+        margin-bottom: 15px !important;
+    }
+
+    .error404 h1.entry-title,
+    .single h1.entry-title,
+    .page h1.entry-title {
+        font-size: 20px !important;
+        margin-bottom: 8px;
+        margin-top: 11px;
+    }
+
+    .site-branding img {
         max-height: 62px;
         padding-left: 10px;
         padding-top: 13px;
-}
-	
-	.content-search {
-    margin-bottom: 35px;
-    padding: 0px 20px;
-}
-	
-	.sidebar {
-		padding: 20px;
-	}
-	
+    }
+
+    .content-search {
+        margin-bottom: 35px;
+        padding: 0px 20px;
+    }
+
+    .sidebar {
+        padding: 20px;
+    }
+
 }
 
 
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
-	.footer-columns {
-border-top: 0px;
-}
+    .footer-columns {
+        border-top: 0px;
+    }
 
-#secondary {
-    border-top: 3px solid #b33b3b;
-}
-	.content-loop .hentry, .content-list .hentry, .content-grid .hentry {
-    margin-top: 15px;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 15px;
-    padding-bottom: 30px;
-    position: relative;
-}
-	
-	.widget p, .entry-summary, .entry-content, .author-desc {
-    font-family: Varela Round;
-    font-size: 18px;
-    padding-top: 0px;
-}
+    #secondary {
+        border-top: 3px solid #b33b3b;
+    }
 
-	.topBanner {
-		display: none;
-	}
-		.searchResults {
-		font-family: Montserrat;
-    font-size: 16px;
-    font-weight: 700;
-    color: #b33b3b;
-    padding: 12px;
-    background-color: #ffecec;
-			    margin-bottom: 3px;
-	}
-	
-	.redirectRequest {
-    background-color: #e7ffec;
-    padding: 6px 15px;
-    margin-bottom: -1px;
-    border-radius: 0px;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight: 700;
-    color: #417b41;
-    font-size: 11px;
-    margin-top: -3px;
-	}
-	
-	    .resizer2 {
+    .content-loop .hentry,
+    .content-list .hentry,
+    .content-grid .hentry {
+        margin-top: 15px;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 15px;
+        padding-bottom: 30px;
+        position: relative;
+    }
+
+    .widget p,
+    .entry-summary,
+    .entry-content,
+    .author-desc {
+        font-family: Varela Round;
+        font-size: 18px;
+        padding-top: 0px;
+    }
+
+    .topBanner {
+        display: none;
+    }
+
+    .searchResults {
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 700;
+        color: #b33b3b;
+        padding: 12px;
+        background-color: #ffecec;
+        margin-bottom: 3px;
+    }
+
+    .redirectRequest {
+        background-color: #e7ffec;
+        padding: 6px 15px;
+        margin-bottom: -1px;
+        border-radius: 0px;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 700;
+        color: #417b41;
+        font-size: 11px;
+        margin-top: -3px;
+    }
+
+    .resizer2 {
         background-color: #eaeaea;
         padding: 9px;
         border-radius: 0px;
@@ -116,8 +129,8 @@ border-top: 0px;
         border-left: 0px;
         border-right: 0px;
     }
-	
-	    .single .entry-header {
+
+    .single .entry-header {
         padding-top: 5px;
         background-color: #f7f7f7;
         margin-top: -1px;
@@ -126,8 +139,8 @@ border-top: 0px;
         border-bottom: 1px solid #efefef;
         margin-bottom: 0px;
     }
-	
-	 .yarpp_related_posts {
+
+    .yarpp_related_posts {
         text-align: center;
         background-color: #e9e9e9;
         margin-bottom: 0px;
@@ -135,8 +148,8 @@ border-top: 0px;
         padding-top: 10px;
         margin-top: -7px;
     }
-	
-	    #accordi {
+
+    #accordi {
         border-radius: 0px 0px 0px 0px;
         border: 0px !important;
         white-space: pre;
@@ -148,7 +161,7 @@ border-top: 0px;
         overflow-x: auto;
         overflow-y: hidden;
     }
-	
+
     .adminbio {
         line-height: 15px;
     }
@@ -162,9 +175,9 @@ border-top: 0px;
     }
 
     #primary p {
-    margin-bottom: 0px!important;
-    padding-left: 20px;
-    padding-right: 20px;
+        margin-bottom: 0px !important;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .entry-content p {
@@ -196,8 +209,8 @@ border-top: 0px;
         background-color: #f5f5f5;
         border-bottom: 1px solid #c3c3c3;
         padding: 10px;
-		border-left: 0px;
-    border-right: 0px;
+        border-left: 0px;
+        border-right: 0px;
         border-radius: 0px;
         margin-bottom: 0px;
         margin-top: -1px;
@@ -219,14 +232,14 @@ border-top: 0px;
     }
 
     .site-header .search-icon {
-	right: 15px;
-    background-color: #802121;
-    border: 2px solid #b33b3b;
-    padding: 4px;
-    border-radius: 9px;
-    top: 19px;
-}
-    
+        right: 15px;
+        background-color: #802121;
+        border: 2px solid #b33b3b;
+        padding: 4px;
+        border-radius: 9px;
+        top: 19px;
+    }
+
 
     #featured-content {
         background-color: transparent;
@@ -250,7 +263,7 @@ border-top: 0px;
     }
 
     .site-footer .widget {
-       display: none;
+        display: none;
     }
 
     #secondary {
@@ -286,7 +299,9 @@ border-top: 0px;
         padding: 0 5px;
     }
 
-    .error404 h1.entry-title, .single h1.entry-title, .page h1.entry-title {
+    .error404 h1.entry-title,
+    .single h1.entry-title,
+    .page h1.entry-title {
         font-size: 30px;
         /* padding-top: 20px; */
         line-height: 1.25;
@@ -294,7 +309,11 @@ border-top: 0px;
         font-family: Varela Round;
     }
 
-    .content-loop .entry-meta, .content-list .entry-meta, .content-grid .entry-meta, .content-search .entry-meta, .single #primary .entry-meta {
+    .content-loop .entry-meta,
+    .content-list .entry-meta,
+    .content-grid .entry-meta,
+    .content-search .entry-meta,
+    .single #primary .entry-meta {
         font-size: 13px;
         font-weight: bold;
         position: relative;
@@ -302,7 +321,9 @@ border-top: 0px;
         color: #606c7e;
     }
 
-    .widget p, .entry-summary, .author-desc {
+    .widget p,
+    .entry-summary,
+    .author-desc {
         font-family: Varela Round;
         font-size: 16px;
     }
@@ -311,15 +332,16 @@ border-top: 0px;
     .wgBorder {
         line-height: 1.1em;
         min-width: 333px;
-		background-color: #1f1f1f;
+        background-color: #1f1f1f;
         margin-bottom: 0px;
         border-radius: 0px;
         border: none;
     }
 
-	body {
-    background: none;
-}
+    body {
+        background: none;
+    }
+
     .wgNoBorder {
         line-height: 1.1em;
         min-width: 333px;
@@ -328,7 +350,7 @@ border-top: 0px;
         margin-bottom: 0px;
     }
 
-    .sidebar .widget ul > li a {
+    .sidebar .widget ul>li a {
         color: #fff;
         font-family: Varela Round;
         font-size: 15px;
@@ -363,10 +385,10 @@ border-top: 0px;
         /*padding: 0px 5px 0px 5px;*/
         background-image: url(https://www.picopod.it/wp-content/uploads/2018/05/header_bg.jpg);
     }
-	
-	 #primary p {
-    padding-left: 0px;
-    padding-right: 0px;
+
+    #primary p {
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     .entry-author {
@@ -377,7 +399,7 @@ border-top: 0px;
         background-image: none;
     }
 
-   
+
 
 
 
@@ -423,14 +445,20 @@ border-top: 0px;
 
 
 
-    .error404 h1.entry-title, .single h1.entry-title, .page h1.entry-title {
+    .error404 h1.entry-title,
+    .single h1.entry-title,
+    .page h1.entry-title {
         font-size: 22px;
         line-height: 1.25;
         margin-bottom: 3px;
         font-family: Varela Round;
     }
 
-    .content-loop .entry-meta, .content-list .entry-meta, .content-grid .entry-meta, .content-search .entry-meta, .single #primary .entry-meta {
+    .content-loop .entry-meta,
+    .content-list .entry-meta,
+    .content-grid .entry-meta,
+    .content-search .entry-meta,
+    .single #primary .entry-meta {
         font-size: 12px;
         font-weight: bold;
         position: relative;
@@ -462,9 +490,13 @@ border-top: 0px;
     }
 
     .content-search .entry-title {
-        display: table;
         margin-top: 6px;
+        white-space: inherit;
         line-height: 17px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
         font-size: 16px;
     }
 
@@ -533,7 +565,7 @@ border-top: 0px;
     }
 
 
-     
+
     .sidebar .widget .widget-title {
         color: #ffffff;
         font-family: Inconsolata;
@@ -638,8 +670,8 @@ border-top: 0px;
     }
 
     .slicknav_btn {
-margin-right: 65px;
-    margin-top: 29px;
+        margin-right: 65px;
+        margin-top: 29px;
     }
 
     #featured-content {
@@ -698,7 +730,9 @@ margin-right: 65px;
         width: 100%;
     }
 
-    .content-loop .hentry, .content-list .hentry, .content-grid .hentry {
+    .content-loop .hentry,
+    .content-list .hentry,
+    .content-grid .hentry {
         border-bottom: 1px solid #ddd;
         position: relative;
         padding-left: 10px;
@@ -723,17 +757,18 @@ margin-right: 65px;
         line-height: 30px;
     }
 
-    .page-title, .page h1.entry-title {
+    .page-title,
+    .page h1.entry-title {
         text-align: -webkit-center;
-    font-size: 20px;
-    border-bottom: 1px solid #e2c7c7;
-    padding-top: 10px;
-    padding-bottom: 7px;
-    background-color: #f3f3f3;
-    margin-bottom: 0px;
-    border-radius: 0px !important;
-    margin-top: -3px;
-    border-top: 0px;
+        font-size: 20px;
+        border-bottom: 1px solid #e2c7c7;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        background-color: #f3f3f3;
+        margin-bottom: 0px;
+        border-radius: 0px !important;
+        margin-top: -3px;
+        border-top: 0px;
     }
 
     .single h1.entry-title {
@@ -744,28 +779,28 @@ margin-right: 65px;
     }
 
     .breadcrumbs {
-text-align: -webkit-center;
-    font-size: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #fff5f5;
-    margin-bottom: 0;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 1px solid #b33b3b;
-    border-radius: 0;
+        text-align: -webkit-center;
+        font-size: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #fff5f5;
+        margin-bottom: 0;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 1px solid #b33b3b;
+        border-radius: 0;
     }
 
     .category-description {
-margin-top: -7px;
-    font-family: Varela Round;
-    font-size: 15px;
-    line-height: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 0 !important;
-		margin-bottom: 15px;
+        margin-top: -7px;
+        font-family: Varela Round;
+        font-size: 15px;
+        line-height: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 0 !important;
+        margin-bottom: 15px;
     }
 
     #comments .comment-metadata,
