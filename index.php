@@ -15,9 +15,9 @@ get_header();
 
 <!-- FRONTPAGE HEADER -->
 
-<a href="https://www.picopod.it/artista/italiani/sfera-ebbasta/">
+<a href="https://www.picopod.it/tag/natale/">
 	<div class="mainStage">
-		<img src="https://www.picopod.it/wp-content/uploads/2020/11/ebbasta.jpg">
+		<img src="https://www.picopod.it/wp-content/uploads/2020/12/nat.png">
 	</div>
 </a>
 

@@ -410,7 +410,7 @@ table td {
   clear: both;
 }
 
-
+/* BODY normale 
 
 body {
   background: #efebe0;
@@ -422,7 +422,19 @@ body {
   line-height: 1.6em;
   background-repeat: no-repeat;
   background-size: contain;
-}
+} */
+
+/* BODY natale */
+
+body {
+  background: #be0d19;
+    background-image: url(https://www.picopod.it/wp-content/uploads/2020/12/ao.jpg);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6em;
+    background-repeat: repeat;
+    background-size: unset;
+} 
 
 a {
   color: #222;
