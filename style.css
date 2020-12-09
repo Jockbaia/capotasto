@@ -1752,6 +1752,10 @@ input:checked+.slider:before {
 
 .content-search .entry-title {
   font-size: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .content-search .entry-meta {
