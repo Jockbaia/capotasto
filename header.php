@@ -17,7 +17,7 @@
 <head>
 	<meta name="google-site-verification" content="XNTymqUF-oKifqX7hPf9Nu76OExy2Iazv5S_Wd5Cp54" />
 	<meta charset="<?php bloginfo('charset'); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable='no'">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php if (get_theme_mod('favicon', '') != null) { ?>
 		<link rel="icon" type="image/png" href="<?php echo esc_url(get_theme_mod('favicon', '')); ?>" />
