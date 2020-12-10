@@ -438,7 +438,14 @@
 
     .entry-summary {
         clear: both;
-        display: block;
+        margin-left: -10px;
+        margin-right: -10px;
+        border-radius: 0px !important;
+        border-bottom: none !important;
+    }
+
+    .content-list .hentry {
+        padding-bottom: 0px;
     }
 
     .entry-summary:before {
