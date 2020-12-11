@@ -502,8 +502,11 @@ object {
   background-color: #1f1f1f;
   border-radius: 10px;
   padding: 20px;
-  color: white;
+  color: #fff;
   margin-bottom: 10px;
+  background-image: url(https://i.imgur.com/IykmeqI.gif);
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
 /* Contact Form 7 */
