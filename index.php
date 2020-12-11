@@ -27,7 +27,7 @@ get_header();
 <div id="primary" class="clear">
 
 	<div class="homeData">Ci sono attualmente <span style="color: #ff6600;"><strong><?php echo do_shortcode('[sbs_cpt_count cpt="post" txt="accordi"]'); ?></strong></span> nel sito
-		</br>Ultimo aggiornamento il <span style="color: #75ccff;"><strong><?php echo do_shortcode('[sbs_updated]'); ?></strong></span></div>
+		</br>Aggiornato il <span style="color: #75ccff;"><strong><?php echo do_shortcode('[sbs_updated]'); ?></strong></span></div>
 
 	<main id="main" class="site-main clear">
 		<div id="recent-content" class="content-list">
