@@ -428,13 +428,13 @@ body {
 
 body {
   background: #be0d19;
-    background-image: url(https://www.picopod.it/wp-content/uploads/2020/12/ao.jpg);
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.6em;
-    background-repeat: repeat;
-    background-size: unset;
-} 
+  background-image: url(https://www.picopod.it/wp-content/uploads/2020/12/ao.jpg);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6em;
+  background-repeat: repeat;
+  background-size: unset;
+}
 
 a {
   color: #222;
@@ -496,6 +496,14 @@ embed,
 iframe,
 object {
   max-width: 100%;
+}
+
+.homeData {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  margin-bottom: 10px;
 }
 
 /* Contact Form 7 */

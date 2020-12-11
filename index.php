@@ -25,6 +25,8 @@ get_header();
 
 <div id="primary" class="clear">
 
+<div class="homeData"> <span class="sbs-count-posts"> accordi nel sito </div>
+
 	<main id="main" class="site-main clear">
 		<div id="recent-content" class="content-list">
 
