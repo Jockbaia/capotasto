@@ -404,7 +404,7 @@
     }
 
     .homeData {
-        border-radius: none !important;
+        border-radius: 0px !important;
         padding: 14px 12px;
         font-size: 12px;
         line-height: 19px;
