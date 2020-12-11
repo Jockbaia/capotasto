@@ -504,8 +504,9 @@ object {
   padding: 20px;
   color: #fff;
   margin-bottom: 10px;
-  background-image: url(https://i.imgur.com/IykmeqI.gif);
+  background-image: url(https://www.picopod.it/wp-content/uploads/2020/12/bgData.gif);
   background-repeat: no-repeat;
+  background-size: contain;
   background-position: right;
 }
 
