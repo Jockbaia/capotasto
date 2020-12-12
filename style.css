@@ -437,7 +437,7 @@ body {
 }
 
 a {
-  color: #222;
+  color: #b33b3b;
   text-decoration: none;
 }
 
@@ -446,7 +446,7 @@ a:hover {
 }
 
 a:visited {
-  color: #222;
+  color: #b33b3b;
 }
 
 a:active,
