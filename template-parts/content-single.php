@@ -32,7 +32,7 @@
 
 
 
-	<div class="entry-content">
+	<div id="chordDescription" class="entry-content">
 		<!-- PIERO: Commento PHP immagine -->
 		<?php
 		/*if ( has_post_thumbnail() && ( get_theme_mod('single-featured-on', true) == true ) ) :
@@ -108,29 +108,6 @@
 
 	<div class="resizer">
 		<?php if (!empty($video_str)) { ?>
-
-			<!-- <label class="switch">
-				<script>
-					function handleClick(cb) {
-						var pl = document.querySelector("div[class=modal-player]");
-						var controls = document.querySelector("div[id=cmd]");
-						var controlsMobile = document.querySelector("div[id=cmd-mobile]");
-						if (cb.checked) {
-							controlsMobile.style.bottom = '0px';
-							pl.style.right = "10px";
-							//pl.style.maxWidth = "100%"
-							//pl.style.visibility = 'visible';
-						} else {
-							controlsMobile.style.bottom = '-500px';
-							pl.style.right = "-300px";
-							//pl.style.maxWidth = "0%"
-							//pl.style.visibility = 'hidden';
-						}
-					}
-				</script>
-				<input type="checkbox" name="slider" onclick='handleClick(this);'>
-				<span class="slider round"></span>
-			</label> -->
 		<?php } ?>
 		<?php if (function_exists('fontResizer_place')) {
 			fontResizer_place();
