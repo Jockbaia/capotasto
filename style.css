@@ -35,6 +35,14 @@ html {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Varela Round';
+  src: url('assets/fonts/varelaround.woff2') format('woff2'),
+       url('assets/fonts/varelaround.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body,
 div,
