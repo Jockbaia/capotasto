@@ -942,7 +942,20 @@ input:checked+.slider:before {
 .fav_list {
   background-color: #f4f4f4;
   border-radius: 10px;
-  padding: 14px;
+  padding: 10px 15px 0px 15px;
+  white-space: pre;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border: 1px solid #dddddd;
+}
+
+.fav_list img {
+  height: 23px !important;
+  width: 23px !important;
+  border-radius: 30px;
+  padding-right: 0px !important;
+  margin-right: 5px;
+  border: 1px solid #b8b8b8;
 }
 
 /* Remove the deprecated screen reader */
