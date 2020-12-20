@@ -949,6 +949,15 @@ input:checked+.slider:before {
   border: 1px solid #dddddd;
 }
 
+.misc_list {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 10px 15px 0px 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border: 1px solid #dddddd;
+}
+
 .fav_list img {
   height: 23px !important;
   width: 23px !important;
