@@ -1620,6 +1620,7 @@ input:checked+.slider:before {
 .citazione {
   font-family: Arial;
   padding: 20px;
+  text-align: center;
 }
 
 .content-loop .entry-title a:hover,
