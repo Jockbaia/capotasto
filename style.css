@@ -1617,15 +1617,6 @@ input:checked+.slider:before {
   margin-bottom: 8px;
 }
 
-.citazioni {
-  font-style: italic;
-  color: #cdcdcd;
-  max-width: 600px;
-  font-family: Arial;
-  padding: 20px;
-  text-align: center;
-}
-
 .content-loop .entry-title a:hover,
 .content-list .entry-title a:hover,
 .content-grid .entry-title a:hover {
