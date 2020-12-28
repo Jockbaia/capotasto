@@ -1620,6 +1620,7 @@ input:checked+.slider:before {
 .citazioni {
   font-style: italic;
   color: #cdcdcd;
+  max-width: 150px;
   font-family: Arial;
   padding: 20px;
   text-align: center;
