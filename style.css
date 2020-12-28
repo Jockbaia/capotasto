@@ -1618,6 +1618,8 @@ input:checked+.slider:before {
 }
 
 .citazioni {
+  font-style: italic;
+  color: #cdcdcd;
   font-family: Arial;
   padding: 20px;
   text-align: center;
