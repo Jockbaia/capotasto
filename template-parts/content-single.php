@@ -100,7 +100,7 @@
 																	echo '<a href="' . get_category_link($category[0]->cat_ID) . '"> ' . $category[0]->cat_name . '</a>';
 																	?></div>
 
-		<div class="printUserbox"><i class="fas fa-print"></i> <a href="#" onclick="ga('send', {hitType: 'event',  eventCategory: 'Interaction', eventAction: 'print', eventLabel: '<?php the_ID(); ?>'});window.print();return false;">Stampa</a>
+		<div class="printUserbox"><i class="fas fa-print"></i> <a href="#" onclick="window.print()">Stampa</a>
 		</div>
 
 
