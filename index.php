@@ -14,13 +14,13 @@
 get_header();
 ?>
 
-<!-- FRONTPAGE HEADER -->
+<!-- FRONTPAGE HEADER 
 
 <a href="https://www.picopod.it/tag/natale/">
 	<div class="mainStage">
 		<img src="https://www.picopod.it/wp-content/uploads/2020/12/nat.png">
 	</div>
-</a>
+</a> -->
 
 <!-- CONTENT AREA -->
 

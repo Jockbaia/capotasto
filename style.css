@@ -410,7 +410,7 @@ table td {
   clear: both;
 }
 
-/* BODY normale 
+/* BODY normale */
 
 body {
   background: #efebe0;
@@ -422,9 +422,9 @@ body {
   line-height: 1.6em;
   background-repeat: no-repeat;
   background-size: contain;
-} */
+} 
 
-/* BODY natale */
+/* BODY natale 
 
 body {
   background: #be0d19;
@@ -434,7 +434,7 @@ body {
   line-height: 1.6em;
   background-repeat: repeat;
   background-size: unset;
-}
+} */
 
 a {
   color: #b33b3b;
