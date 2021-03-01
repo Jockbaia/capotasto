@@ -14,13 +14,13 @@
 get_header();
 ?>
 
-<!-- FRONTPAGE HEADER 
+<!-- FRONTPAGE HEADER -->
 
-<a href="https://www.picopod.it/tag/natale/">
+<a href="https://www.picopod.it/tag/sanremo2021/">
 	<div class="mainStage">
-		<img src="https://www.picopod.it/wp-content/uploads/2020/12/nat.png">
+		<img src="https://www.picopod.it/wp-content/uploads/2021/03/sanremo2021.jpg">
 	</div>
-</a> -->
+</a> 
 
 <!-- CONTENT AREA -->
 
