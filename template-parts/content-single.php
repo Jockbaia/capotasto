@@ -222,6 +222,8 @@
 		?>
 	</div>
 
+	<?php the_ad_group(1157); ?>
+
 	<?php the_ad_group(1011); ?>
 	<?php the_ad_group(1013); ?>
 
