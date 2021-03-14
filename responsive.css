@@ -70,7 +70,16 @@
 
     .content-search {
         margin-bottom: 35px;
-        padding: 0px 20px;
+        padding: 0px;
+    }
+
+    .content-search .hentry {
+        padding: 0 10px 20px;
+    }
+
+    .redirectRequest {
+        margin-bottom: 20px;
+        font-size: 13px;
     }
 
     .sidebar {
