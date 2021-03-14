@@ -2,6 +2,16 @@
 
 @media only screen and (max-width: 959px) and (min-width: 768px) {
 
+    .imgWidget img {
+        max-width: 800px !important;
+        margin: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        border: 6px solid #171717;
+    }
+
     .mainStage img {
         border-radius: 0px !important;
     }
