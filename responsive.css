@@ -78,6 +78,12 @@
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
 
+    /* Widget Ad in desktop disappears during transition to mobile */
+    
+    .desktopWidgetAd {
+        display: none;
+    }
+
     #chordDescription {
         padding: 15px 20px 5px; 
     }
