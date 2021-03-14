@@ -21,7 +21,7 @@
         border-radius: 0px !important;
     }
 
-    .category-image img {
+    .category-image {
         border-radius: 0px;
         max-height: 130px;
         object-fit: cover;
