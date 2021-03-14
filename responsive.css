@@ -23,6 +23,8 @@
 
     .category-image img {
         border-radius: 0px;
+        max-height: 130px;
+        object-fit: cover;
     }
 
     .content-banner {
