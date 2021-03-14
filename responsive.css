@@ -78,8 +78,8 @@
     }
 
     .redirectRequest {
-        margin-bottom: 20px;
-        font-size: 13px;
+        margin-bottom: 20px !important;
+        font-size: 13px !important;
     }
 
     .sidebar {
