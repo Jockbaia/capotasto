@@ -12,6 +12,11 @@
         border: 6px solid #171717;
     }
 
+    .homeData {
+        border-radius: 0px !important;
+        margin-top: -20px !important;
+    }
+    
     .mainStage img {
         border-radius: 0px !important;
     }
@@ -79,7 +84,7 @@
 @media only screen and (max-width: 959px) {
 
     /* Widget Ad in desktop disappears during transition to mobile */
-    
+
     .desktopWidgetAd {
         display: none;
     }
