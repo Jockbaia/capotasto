@@ -12,6 +12,13 @@
         border: 6px solid #171717;
     }
 
+    #excerpt {
+        line-height: 22px;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 10px;
+    }
+
     .homeData {
         border-radius: 0px !important;
         margin-top: -20px !important;
