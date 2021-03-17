@@ -89,7 +89,7 @@
 	</div>
 
 	<div class="content-banner">
-		<?php the_ad_group(954); ?>
+		<div class="mobileOnly"><?php the_ad_group(954); ?></div>
 	</div>
 
 	<div class="resizer2">
@@ -222,8 +222,8 @@
 		?>
 	</div>
 
-	<?php the_ad_group(1011); ?>
-	<?php the_ad_group(1013); ?>
+	<div class="desktopOnly"><?php the_ad_group(1011); ?></div>
+	<div class="mobileOnly"><?php the_ad_group(1013); ?></div>
 
 	<div class="yarpp_related_posts">
 		<?php related_posts(); ?>

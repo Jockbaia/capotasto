@@ -1,3 +1,14 @@
+/* DESKTOP */
+
+@media only screen and (min-width: 959px)  {
+
+.mobileOnly {
+    display: none;
+}
+
+}
+
+
 /* TABLET */
 
 @media only screen and (max-width: 959px) and (min-width: 768px) {
@@ -102,6 +113,10 @@
 @media only screen and (max-width: 959px) {
 
     /* Widget Ad in desktop disappears during transition to mobile */
+
+    .desktopOnly {
+        display: none;
+    }
 
     .desktopWidgetAd {
         display: none;
