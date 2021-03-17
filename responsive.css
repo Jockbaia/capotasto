@@ -40,9 +40,12 @@
     }
 
     .category-image {
-        border-radius: 0px;
-        max-height: 130px;
-        object-fit: cover;
+        max-width: 800px !important;
+        margin: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
     }
 
     .content-banner {
