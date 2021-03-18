@@ -1,6 +1,6 @@
 /* DESKTOP */
 
-@media only screen and (min-width: 959px)  {
+@media only screen and (min-width: 1120px)  {
 
 .mobileOnly {
     /* display: none; */
@@ -11,7 +11,7 @@
 
 /* TABLET */
 
-@media only screen and (max-width: 959px) and (min-width: 768px) {
+@media only screen and (max-width: 1120px) and (min-width: 768px) {
 
     .imgWidget img {
         max-width: 800px !important;
@@ -113,7 +113,7 @@
 
 
 /* Smaller than standard 960 (devices and browsers) */
-@media only screen and (max-width: 959px) {
+@media only screen and (max-width: 1120px) {
 
     /* Widget Ad in desktop disappears during transition to mobile */
 
