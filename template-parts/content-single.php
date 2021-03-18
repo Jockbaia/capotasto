@@ -223,11 +223,14 @@
 	</div>
 
 	<div class="desktopOnly"><?php the_ad_group(1011); ?></div>
-	<div class="mobileOnly"><?php the_ad_group(1013); ?></div>
 
 	<div class="yarpp_related_posts">
 		<?php related_posts(); ?>
 	</div>
+	
+	<div class="mobileOnly"><?php the_ad_group(1013); ?></div>
+
+	
 
 	<script src="https://www.picopod.it/script/backToTop.js"></script>
 
