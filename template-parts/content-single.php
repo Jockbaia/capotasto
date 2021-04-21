@@ -88,9 +88,9 @@
 		</div>
 	</div>
 
-	<div class="content-banner">
+	<!-- <div class="content-banner"> -->
 		<div class="mobileOnly"><?php the_ad_group(954); ?></div>
-	</div>
+	<!-- </div> -->
 
 	<div class="resizer2">
 
