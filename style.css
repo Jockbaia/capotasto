@@ -3982,11 +3982,11 @@ modmenu a:visited {
   }
   
   .mobileOnly {
-    border: none;
+    display: none;
   }
 
   .desktopOnly {
-    border: none;
+    display: none;
   }
 
   .content-banner {
