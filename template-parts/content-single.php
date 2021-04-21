@@ -228,11 +228,7 @@
 		<?php related_posts(); ?>
 	</div>
 	
-	<div class="mobileOnly"><?php the_ad_group(1013); ?></div>
-
-	<?php wpp_get_views(); ?> 
-
-	
+	<div class="mobileOnly"><?php the_ad_group(1013); ?></div>	
 
 	<script src="https://www.picopod.it/script/backToTop.js"></script>
 
