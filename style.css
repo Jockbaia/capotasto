@@ -3980,6 +3980,14 @@ modmenu a:visited {
   .site-main {
     border: none;
   }
+  
+  .mobileOnly {
+    border: none;
+  }
+
+  .desktopOnly {
+    border: none;
+  }
 
   .content-banner {
     display: none;
