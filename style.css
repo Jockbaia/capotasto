@@ -3808,9 +3808,9 @@ img:hover {
 }
 
 .slicknav_nav .slicknav_arrow {
-  font-size: 0.8em;
-  color: #333;
-  margin: 0 20px 0 0.4em;
+  font-size: .8em;
+  color: #8a8a8a;
+  margin: 0 20px 0 .4em;
   float: right;
 }
 
@@ -3913,7 +3913,7 @@ img:hover {
 }
 
 .slicknav_nav a:hover {
-  background-color: #f6f6f6;
+  background-color: #b33b3b;
 }
 
 .slicknav_nav .slicknav_txtnode {
