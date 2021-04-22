@@ -125,6 +125,10 @@
         display: none;
     }
 
+    .imgWidgetDesktop img {
+        display:none;
+    }
+
     .desktopWidgetAd {
         display: none;
     }
