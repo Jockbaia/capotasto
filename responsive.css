@@ -114,10 +114,14 @@
 
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 1120px) {
-
+    
     /* Widget Ad in desktop disappears during transition to mobile */
 
     .desktopOnly {
+        display: none;
+    }
+
+    .wgBorderDesktop {
         display: none;
     }
 
