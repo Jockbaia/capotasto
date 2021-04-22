@@ -13,97 +13,23 @@
 
 */
 
-
-
-
-/*      ----        TEMP     ----        */
-/*      ----        TEMP     ----        */
-/*      ----        TEMP     ----        */
-/*      ----        TEMP     ----        */
-
-/*      ----        STARTER     ----        */
-
 /* Basics */
 
 html {
   -webkit-text-size-adjust: 100%;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: border-box;
 }
 
-html,
-body,
-div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-abbr,
-address,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-samp,
-small,
-strong,
-sub,
-sup,
-var,
-b,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5,
+h6, p, blockquote, pre, abbr, address, cite, code, del, dfn,
+em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b,
+i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+details, figcaption, figure, footer, header, hgroup, menu, nav, section,
+summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -118,18 +44,8 @@ body {
   line-height: 1;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-main {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu,
+nav, section, main {
   display: block;
 }
 
@@ -137,15 +53,11 @@ nav ul {
   list-style: none;
 }
 
-blockquote,
-q {
+blockquote, q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after, q:before, q:after {
   content: '';
   content: none;
 }
@@ -174,8 +86,7 @@ del {
   text-decoration: line-through;
 }
 
-abbr[title],
-dfn[title] {
+abbr[title], dfn[title] {
   border-bottom: 1px dotted;
   cursor: help;
 }
@@ -194,8 +105,7 @@ hr {
   padding: 0;
 }
 
-input,
-select {
+input, select {
   vertical-align: middle;
 }
 
@@ -203,8 +113,7 @@ sup {
   top: -.5em;
 }
 
-sub,
-sup {
+sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -227,44 +136,29 @@ img {
   border-radius: 10px;
 }
 
-embed,
-iframe,
-object {
+embed, iframe, object {
   max-width: 100%;
   width: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   color: #222;
   font-weight: bold;
 }
 
-strong,
-b {
+strong, b {
   font-weight: bold;
 }
 
-input,
-textarea,
-select {
+input, textarea, select {
   -webkit-appearance: none;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-input,
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="password"],
-textarea {
+input, input[type="text"], input[type="email"], input[type="url"],
+input[type="search"], input[type="password"], textarea {
   font-size: 15px;
   font-weight: normal;
   background-color: #fff;
@@ -288,61 +182,45 @@ textarea {
   padding: 10px 15px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="password"] {
+input[type="text"], input[type="email"], input[type="url"],
+input[type="search"], input[type="password"] {  
   height: 40px;
   line-height: 40px;
   padding: 0 15px;
 }
 
-button,
-.btn,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
+/* Buttons */
+
+button, .btn, input[type="submit"],
+input[type="reset"], input[type="button"] {
   border: none;
   color: #fff;
   padding: 0 15px;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
   height: 40px;
-  line-height: 40px;
   text-transform: uppercase;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
-  -webkit-appearance: none;
-  -webkit-backface-visibility: hidden;
-}
-
-input[type="submit"] {
   background-color: #b33b3b;
   margin-top: -23px;
   width: 100%;
   border-radius: 5px;
-
 }
 
-button:hover,
-.btn:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover,
-input[type="button"]:hover {
+
+button:hover, .btn:hover, input[type="reset"]:hover,
+input[type="submit"]:hover, input[type="button"]:hover {
   opacity: 0.85;
   text-decoration: none;
 }
 
-button:focus,
-textarea:focus {
+button:focus, textarea:focus {
   outline: 0;
 }
+
+/* Table */
 
 table {
   font-size: 14px;
@@ -403,14 +281,13 @@ table td {
   clear: both;
 }
 
-.clear:before,
-.clear:after {
+.clear:before, .clear:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* BODY normale */
+/* Body Tradizionale */
 
 body {
   background: #d0d0d0;
@@ -424,7 +301,7 @@ body {
   background-size: contain;
 } 
 
-/* BODY natale 
+/* Body Natalizio 
 
 body {
   background: #be0d19;
@@ -492,11 +369,11 @@ a:focus {
   display: block;
 }
 
-embed,
-iframe,
-object {
+embed, iframe, object {
   max-width: 100%;
 }
+
+/* Header stats (plettri) */
 
 .homeData {
   background-color: #1f1f1f;
@@ -533,7 +410,7 @@ object {
   margin-bottom: -15px !important;
 }
 
-/*      ----        YOUTUBE PLAYER      ----        */
+/* Youtube Player */
 
 .modal-player {
   /*max-width       : 0%;*/
@@ -642,79 +519,6 @@ iframe#player {
   height: 10px;
   background: #672d2d;
   cursor: pointer;
-}
-
-/*      ----        YOUTUBE SWITCH      ----        */
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 25px;
-  float: left;
-  margin-right: 5px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  font-family: 'Genericons';
-  content: "\f104";
-  height: 23px;
-  width: 18px;
-  left: 4px;
-  bottom: 4px;
-  background-color: #fff;
-  transition: .4s;
-  font-style: normal;
-  font-weight: 400;
-  padding-top: 2px;
-  text-decoration: inherit;
-  font-size: 17px;
-  text-align: center;
-  vertical-align: text-top;
-  line-height: 17px;
-}
-
-input:checked+.slider {
-  background-color: #B33B3B;
-}
-
-input:focus+.slider {
-  box-shadow: 0 0 1px #B33B3B;
-}
-
-input:checked+.slider:before {
-  -webkit-transform: translateX(24px);
-  -ms-transform: translateX(24px);
-  transform: translateX(24px);
-}
-
-.slider.round {
-  border-radius: 5px;
-  height: 31px;
-  margin-top: -4px;
-}
-
-.slider.round:before {
-  border-radius: 3px;
 }
 
 /*      ----        CHORDS STYLING      ----        */
