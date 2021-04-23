@@ -788,12 +788,8 @@ iframe#player {
   display: none;
 }
 
-/* OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO NOTE OLD SECTION WITH UNOPTIMIZED CSS OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO */
+/* Genericons */
 
-
-
-/* =Genericons, thanks to FontSquirrel.com for conversion!
--------------------------------------------------------------- */
 @font-face {
   font-family: 'Genericons';
   src: url("genericons/font/genericons-regular-webfont.eot");
@@ -802,18 +798,10 @@ iframe#player {
   font-style: normal;
 }
 
-/* Genericons */
-.bypostauthor>article .fn:before,
-.comment-edit-link:before,
-.comment-reply-link:before,
-.comment-reply-login:before,
-.comment-reply-title small a:before,
-.comment-list .children li:before,
-.contributor-posts-link:before,
-.menu-toggle:before,
-.search-toggle:before,
-.slider-direction-nav a:before,
-.widget_happythemes_ephemera .widget-title:before {
+.bypostauthor>article .fn:before, .comment-edit-link:before, .comment-reply-link:before,
+.comment-reply-login:before, .comment-reply-title small a:before, .comment-list .children li:before,
+.contributor-posts-link:before, .menu-toggle:before, .search-toggle:before,
+.slider-direction-nav a:before, .widget_happythemes_ephemera .widget-title:before {
   -webkit-font-smoothing: antialiased;
   display: inline-block;
   font: normal 16px/1 Genericons;
@@ -821,9 +809,8 @@ iframe#player {
   vertical-align: text-bottom;
 }
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
+/*      ----        HEADER        ----        */
+
 #masthead .container {
   position: relative;
 }
@@ -851,6 +838,8 @@ iframe#player {
   top: 27px;
   right: 0;
 }
+
+/* Wrapper top banner Desktop */ 
 
 .topBanner {
   margin-left: auto;
@@ -912,6 +901,7 @@ iframe#player {
 }
 
 /* Header Search */
+
 .header-search {
   display: none;
   background-color: #1f1f1f;
@@ -969,8 +959,7 @@ iframe#player {
   opacity: 0.85;
 }
 
-
-
+/* TODO */
 
 /*--------------------------------------------------------------
 2.1 Navigation Menu
