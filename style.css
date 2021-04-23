@@ -1253,8 +1253,8 @@ iframe#player {
 .section-header h1,
 .section-header h2,
 .section-header h3 {
-  font-size: 22px;
-  font-family: Inconsolata;
+  font-size: 18px;
+  font-family: 'Montserrat';
   color: #b33b3b;
 }
 
@@ -3647,14 +3647,15 @@ img:hover {
 }
 
 .slicknav_nav {
-  background: #fff;
+  background: #1e1e1e;
   margin: 0;
-  padding: 0;
-  font-size: 0.875em;
+  padding: 10px;
+  font-size: .875em;
   list-style: none;
   overflow: hidden;
   position: relative;
   z-index: 999;
+  border-bottom: 3px solid #b33b3b;
 }
 
 .slicknav_nav .sub-menu {
@@ -3682,7 +3683,6 @@ img:hover {
   border-bottom: 0;
   margin: 0;
   text-decoration: none;
-  background-color: #1f1f1f;
   color: #fff;
   height: 42px;
   line-height: 42px;
