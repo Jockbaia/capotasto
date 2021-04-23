@@ -959,12 +959,8 @@ iframe#player {
   opacity: 0.85;
 }
 
-/* TODO */
+/* Navigation Menù */
 
-/*--------------------------------------------------------------
-2.1 Navigation Menu
---------------------------------------------------------------*/
-/* Essential Styles */
 .sf-menu * {
   margin: 0;
   padding: 0;
@@ -981,8 +977,7 @@ iframe#player {
   position: relative;
 }
 
-.sf-menu li:hover>ul,
-.sf-menu li.sfHover>ul {
+.sf-menu li:hover>ul, .sf-menu li.sfHover>ul {
   display: block;
 }
 
@@ -1008,7 +1003,6 @@ iframe#player {
   position: relative;
 }
 
-/* Theme Navigation Skin */
 .sf-menu {
   float: left;
 }
@@ -1024,12 +1018,10 @@ iframe#player {
 .sf-menu a {
   text-decoration: none;
   zoom: 1;
-  /* IE7 */
 }
 
 .sf-menu li {
   white-space: nowrap;
-  /* no need for Supersubs plugin */
   line-height: 75px;
 }
 
@@ -1054,17 +1046,12 @@ iframe#player {
 }
 
 .sf-menu li a:hover {}
-
 .sf-menu li a:hover:before {
   transform: scaleX(1);
 }
 
-.sf-menu li.sfHover a,
-.sf-menu li.current-menu-item a,
-.sf-menu li.current-menu-item a:hover {}
-
-.sf-menu li.sfHover a:before,
-.sf-menu li.current-menu-item a:before,
+.sf-menu li.sfHover a, .sf-menu li.current-menu-item a, .sf-menu li.current-menu-item a:hover {}
+.sf-menu li.sfHover a:before, .sf-menu li.current-menu-item a:before,
 .sf-menu li.current-menu-item a:hover:before {
   transform: scaleX(1);
 }
@@ -1100,12 +1087,10 @@ iframe#player {
   display: block;
 }
 
-/*** arrows (for all except IE7) **/
 .sf-arrows .sf-with-ul {
   padding-right: 27px;
 }
 
-/* styling for both css and generated arrows */
 .sf-arrows .sf-with-ul:after {
   position: absolute;
   top: 50%;
@@ -1120,7 +1105,6 @@ iframe#player {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* styling for right-facing arrows */
 .sf-arrows ul .sf-with-ul:after {
   right: 5px;
   margin-top: -5px;
@@ -1132,21 +1116,13 @@ iframe#player {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Primary Menu */
-#primary-menu {
-  font-family: Varela Round;
-}
+/* Homepage */
 
-/*--------------------------------------------------------------
-3. Homepage
---------------------------------------------------------------*/
-.entry-title a,
-.entry-title a:visited {
+.entry-title a, .entry-title a:visited {
   font-family: Varela Round;
   color: #222;
 }
 
-/* Site Content */
 .site-content {
   padding: 15px 0;
 }
@@ -1154,7 +1130,6 @@ iframe#player {
 #primary {
   float: left;
   display: inline-block;
-
   width: 790px;
 }
 
@@ -1182,6 +1157,8 @@ iframe#player {
   font-size: 11px;
   padding: 2px 3px;
 }
+
+/* TODO */
 
 /*--------------------------------------------------------------
 3.2 Recent Content
